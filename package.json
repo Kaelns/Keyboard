@@ -4,7 +4,7 @@
   "description": "Private repository for @kaelns",
   "main": "index.js",
   "scripts": {
-    "style": "sass --watch shelter/styles/style.scss shelter/styles/style.css",
+    "style": "sass --watch shelter/styles/style.scss shelter/styles/styles/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

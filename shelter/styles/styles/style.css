@@ -34,7 +34,7 @@ main {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: 0;
 }
 
 /* Grouping content
@@ -337,8 +337,37 @@ template {
   display: none;
 }
 
+@font-face {
+  font-family: "Georgia";
+  src: url("../../assets/fonts/georgia/georgia-regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../../assets/fonts/georgia/georgia-italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../../assets/fonts/georgia/georgia-bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../../assets/fonts/arial/arial-regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../../assets/fonts/arial/arial-italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 400;
+}
 html {
-  width: 100%;
   font-size: 10px;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -348,6 +377,9 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 *:active,
@@ -361,6 +393,14 @@ html {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Georgia, serif;
 }
 
 h1 {
@@ -396,6 +436,21 @@ h5 {
   font-weight: 400;
   line-height: 17px;
   letter-spacing: 0.06em;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bg-color_brown {
+  background: url("../../assets/images/bg/noise_transparent@2x.png"), radial-gradient(at left top, #5b483a, #262425);
+}
+.bg-color_white {
+  background-color: #ffffff;
+}
+.bg-color_beige {
+  background-color: #f6f6f6;
 }
 
 /*# sourceMappingURL=style.css.map */
