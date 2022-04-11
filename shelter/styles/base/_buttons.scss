@@ -1,0 +1,21 @@
+.btn-oval {
+  display: inline-block;
+  padding: 14px 44px;
+  border-radius: 26px;
+  background: $color-primary;
+  border: 1px solid $color-primary;
+  cursor: pointer;
+  @extend %font-family-1;
+  @include font(1.7rem, 2.2rem, 0.1rem);
+  @include animation();
+
+  &_transparent {
+    background: transparent;
+  }
+
+  &:hover,
+  &_transparent:hover {
+    background: $color-primary-hover;
+    border-color: $color-primary-hover;
+  }
+}

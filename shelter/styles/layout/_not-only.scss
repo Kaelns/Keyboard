@@ -1,0 +1,30 @@
+.not-only__container {
+  @include flex($align: center);
+  gap: 42px;
+  margin-bottom: -2.45px;
+}
+
+.not-only__column {
+  &_1 {
+    width: min(36vw, 460px);
+    margin-bottom: 80px;
+  }
+
+  &_2 {
+    width: min(54.6vw, 698px);
+  }
+}
+
+.not-only__title,
+.not-only__text {
+  color: $color-titles-on-background-dark;
+  margin-bottom: 42px;
+}
+
+.not-only__title {
+  max-width: 310px;
+}
+
+.not-only__link {
+  margin: 0;
+}

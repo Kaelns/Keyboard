@@ -2,6 +2,7 @@
   @extend %font-family-1;
   @include font(3.3rem, 3.5rem, 0.13rem);
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 .logo__subtitle {

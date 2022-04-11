@@ -7,10 +7,13 @@
 @import "base/typography";
 @import "base/base";
 @import "base/logo";
+@import "base/background-colors";
+@import "base/links";
+@import "base/img";
+@import "base/buttons";
 
 @import "layout/container";
 @import "layout/header";
+@import "layout/not-only";
 
-@import "components/background-colors";
-@import "components/links";
 @import "components/navigation";

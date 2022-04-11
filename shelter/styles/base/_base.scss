@@ -10,6 +10,7 @@ html {
 .text,
 .text-italic {
   @extend %font-family-2;
+  cursor: default;
 }
 
 h1,
@@ -18,6 +19,7 @@ h3,
 h4,
 h5 {
   @extend %font-family-1;
+  cursor: default;
 }
 
 h1 {
