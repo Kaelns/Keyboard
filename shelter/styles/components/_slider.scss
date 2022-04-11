@@ -1,0 +1,42 @@
+.slider {
+  @include flex();
+  column-gap: 90px;
+}
+
+.slider__btn {
+  &_1 {
+    // margin-right: 53px;
+  }
+
+  &_2 {
+    // margin-left: 53px;
+  }
+}
+
+.slider__slide {
+  @include flex($align: center);
+  flex-direction: column;
+  background: $color-background-cards;
+  border-radius: 10px;
+  @include animation();
+
+  &:hover {
+    background: $color-background;
+  }
+}
+
+.slide-img__container {
+  width: min(21.9vw, 270px);
+}
+
+.slide__img {
+  width: 100%;
+}
+
+.slide__title {
+  margin-top: 27px;
+}
+
+.slide__btn {
+  margin: 30px 0;
+}

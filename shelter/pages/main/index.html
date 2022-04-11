@@ -94,30 +94,57 @@
     <!-- ____________ Our-friends ____________ -->
 
     <section id="Our-friends" class="our-friends bg-color_beige">
-      <div class="container">
+      <div class="container our-friends__container">
         <h3 class="our-friends__title">
-          Our friends who are looking for a house
+          Our friends who <br />
+          are looking for a house
         </h3>
-        <div class="our-friends__slider slider">
-          <div class="slider__btn_1"></div>
-          <div class="slider__slide_1 slide">
-            <img src="../../assets/images/our-friends/katrine.png" alt="dog" />
-            <h4 class="slide__title">Katrine</h4>
-            <div class="slide btn"></div>
+        <div class="slider__container">
+          <button class="arrow-left btn-round_transparent"></button>
+          <div class="slider">
+            <div class="slider__slide">
+              <div class="slide-img__container">
+                <img
+                  class="slide__img"
+                  src="../../assets/images/our-friends/katrine.png"
+                  alt="dog"
+                />
+              </div>
+              <h4 class="slide__title">Katrine</h4>
+              <button class="slide__btn btn-oval_transparent">
+                Learn more
+              </button>
+            </div>
+            <div class="slider__slide">
+              <div class="slide-img__container">
+                <img
+                  class="slide__img"
+                  src="../../assets/images/our-friends/jennifer.png"
+                  alt="dog"
+                />
+              </div>
+              <h4 class="slide__title">Jennifer</h4>
+              <button class="slide__btn btn-oval_transparent">
+                Learn more
+              </button>
+            </div>
+            <div class="slider__slide">
+              <div class="slide-img__container">
+                <img
+                  class="slide__img"
+                  src="../../assets/images/our-friends/woody.png"
+                  alt="dog"
+                />
+              </div>
+              <h4 class="slide__title">Woody</h4>
+              <button class="slide__btn btn-oval_transparent">
+                Learn more
+              </button>
+            </div>
           </div>
-          <div class="slider__slide_2 slide">
-            <img src="../../assets/images/our-friends/jennifer.png" alt="dog" />
-            <h4 class="slide__title">Jennifer</h4>
-            <div class="slide btn"></div>
-          </div>
-          <div class="slider__slide_3 slide">
-            <img src="../../assets/images/our-friends/woody.png" alt="dog" />
-            <h4 class="slide__title">Woody</h4>
-            <div class="slide btn"></div>
-          </div>
-          <div class="slider__btn_2"></div>
+          <button class="arrow-right btn-round_transparent"></button>
         </div>
-        <div class="our-friends__btn"></div>
+        <button class="our-friends__btn btn-oval">Get to know the rest</button>
       </div>
     </section>
 
@@ -221,5 +248,6 @@
         </div>
       </div>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>

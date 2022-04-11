@@ -15,3 +15,13 @@
 @mixin animation($time: 0.5s) {
   transition: all $time ease-out;
 }
+
+@mixin content-before($width, $height) {
+  content: "";
+  position: absolute;
+  width: $width;
+  height: $height;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
