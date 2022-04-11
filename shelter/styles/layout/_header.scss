@@ -1,0 +1,7 @@
+.header {
+  padding: 55px 0;
+}
+
+.header__container {
+  @include flex($justify: space-between, $align: center);
+}

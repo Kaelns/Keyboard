@@ -349,3 +349,29 @@ template {
 [hidden] {
   display: none;
 }
+
+// ? My changes
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+*:active,
+*:hover,
+*:focus {
+  outline: 0 !important;
+}
+
+ol,
+ul {
+  list-style: none;
+}

@@ -1,0 +1,17 @@
+@mixin font($size, $height, $spacing, $style: normal, $weight: 400) {
+  font-size: $size;
+  font-weight: $weight;
+  font-style: $style;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
+
+@mixin flex($justify: flex-start, $align: stretch) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin animation($time: 0.5s) {
+  transition: all $time ease-out;
+}

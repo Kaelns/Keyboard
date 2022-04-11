@@ -1,0 +1,27 @@
+.logo__title {
+  @extend %font-family-1;
+  @include font(3.3rem, 3.5rem, 0.13rem);
+  margin-bottom: 1rem;
+}
+
+.logo__subtitle {
+  @extend %font-family-2;
+  @include font(1.3rem, 1.5rem, 0.135rem);
+  color: $color-titles-on-background-dark;
+  text-align: end;
+}
+
+.logo__title,
+.logo__subtitle {
+  @include animation();
+}
+
+.logo:hover {
+  .logo__title {
+    color: $color-primary-hover;
+  }
+
+  .logo__subtitle {
+    color: $color-links-hover;
+  }
+}

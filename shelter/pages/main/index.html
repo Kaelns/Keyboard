@@ -4,24 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../styles/styles/style.css" />
+    <link rel="icon" href="../../assets/footer-puppy.ico" />
     <title>Shelter</title>
   </head>
   <body class="body-container">
     <div class="bg-color_brown">
       <header class="header">
-        <div class="container">
+        <div class="container header__container">
           <a href="#" class="logo">
             <h1 class="logo__title">Cozy House</h1>
             <p class="logo__subtitle">Shelter for pets in Boston</p>
           </a>
           <nav class="nav">
             <ul class="nav__list">
-              <li class="nav__link nav__link_active">
-                <a href="">About the shelter</a>
+              <li class="nav__elem nav__elem_active text">
+                <a class="nav__link" href="#">About the shelter</a>
               </li>
-              <li class="nav__link"><a href="">Our pets</a></li>
-              <li class="nav__link"><a href="">Help the shelter </a></li>
-              <li class="nav__link"><a href="">Contacts</a></li>
+              <li class="nav__elem text">
+                <a class="nav__link" href="../pets/index.html">Our pets</a>
+              </li>
+              <li class="nav__elem text">
+                <a class="nav__link" href="#Help">Help the shelter </a>
+              </li>
+              <li class="nav__elem text">
+                <a class="nav__link" href="#Contacts">Contacts</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -32,7 +39,7 @@
         <div class="container">
           <div class="not-only__column_1">
             <h2 class="not-only__title">Not only people need a house</h2>
-            <p class="not-only__text">
+            <p class="not-only__text text">
               We offer to give a chance to a little and nice puppy with an
               extremely wide and open heart. He or she will love you more than
               anybody else in the world, you will see!
@@ -56,13 +63,13 @@
         </div>
         <div class="about__column_2">
           <h3 class="about__title">About the shelter “Cozy House”</h3>
-          <p class="about__text">
+          <p class="about__text text">
             Currently we have 121 dogs and 342 cats on our hands and statistics
             show that only 20% of them will find a family. The others will
             continue to live with us and will be waiting for a lucky chance to
             become dearly loved.
           </p>
-          <p class="about__text">
+          <p class="about__text text">
             We feed our wards with the best food and make sure that they do not
             get sick, feel comfortable (including psychologically) and well. We
             are supported by 87 volunteers and 28 employees of various skill
@@ -106,7 +113,7 @@
 
     <!-- ____________ Help ____________ -->
 
-    <section class="help bg-color_white">
+    <section id="Help" class="help bg-color_white">
       <div class="container">
         <h3 class="help__title">How you can help our shelter</h3>
         <div class="help__list">
@@ -165,7 +172,7 @@
           <div class="in-addition__card-link">
             <a href="#">Name of the bank / Type of bank account</a>
           </div>
-          <p class="in-addition__text">
+          <p class="in-addition__text text-italic">
             Legal information and lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed
             ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et
@@ -175,7 +182,7 @@
       </div>
     </section>
 
-    <footer class="footer bg-color_brown">
+    <footer id="Contacts" class="footer bg-color_brown">
       <div class="container">
         <div class="footer__contacts">
           <h3 class="footer__title_1">For questions and suggestions</h3>
