@@ -22,6 +22,12 @@ h5 {
   cursor: default;
 }
 
+h3,
+h4,
+h5 {
+  color: $color-titles;
+}
+
 h1 {
   @include font(3.2rem, 3.5rem, 0.06rem);
 }
@@ -31,7 +37,7 @@ h2 {
 }
 
 h3 {
-  @include font(3.5rem, 4.5rem, 0.06rem);
+  @include font(3.5rem, 4.5rem, 0.21rem);
 }
 
 h4 {
@@ -44,8 +50,10 @@ h5 {
 
 .text {
   @include font(1.5rem, 2.4rem, 0rem);
+  color: $color-text-on-background;
 }
 
 .text-italic {
   @include font(1.2rem, 1.8rem, 0rem, $style: italic);
+  color: $color-text-italic;
 }
