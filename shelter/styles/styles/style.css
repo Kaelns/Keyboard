@@ -642,6 +642,48 @@ a {
   background: no-repeat url(../../assets/icons/btn/cross.svg);
 }
 
+.help__icon {
+  position: relative;
+  height: 60px;
+  width: 60px;
+}
+.help__icon::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.help__icon_1::before {
+  background: no-repeat url(../../assets/icons/help/icon-pet-food.svg);
+}
+.help__icon_2::before {
+  background: no-repeat url(../../assets/icons/help/icon-transportation.svg);
+}
+.help__icon_3::before {
+  background: no-repeat url(../../assets/icons/help/icon-toys.svg);
+}
+.help__icon_4::before {
+  background: no-repeat url(../../assets/icons/help/icon-bowls-and-cups.svg);
+}
+.help__icon_5::before {
+  background: no-repeat url(../../assets/icons/help/icon-shampoos.svg);
+}
+.help__icon_6::before {
+  background: no-repeat url(../../assets/icons/help/icon-vitamins.svg);
+}
+.help__icon_7::before {
+  background: no-repeat url(../../assets/icons/help/icon-medicines.svg);
+}
+.help__icon_8::before {
+  background: no-repeat url(../../assets/icons/help/icon-collars-leashes.svg);
+}
+.help__icon_9::before {
+  background: no-repeat url(../../assets/icons/help/icon-sleeping-area.svg);
+}
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -656,12 +698,14 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
 }
 
 .not-only__container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-direction: row;
   gap: 42px;
   margin-bottom: -2.45px;
 }
@@ -692,6 +736,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   padding-top: 80px;
   padding-bottom: 100px;
 }
@@ -700,6 +745,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: stretch;
+  flex-direction: row;
   flex: 0.99;
 }
 .about__column_2 {
@@ -736,8 +782,48 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   width: 100%;
   margin: 60px 0;
+}
+
+.help__container {
+  margin-top: 80px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.help__title {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.help__list {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 118.5px;
+  row-gap: 55px;
+}
+
+.help__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.5s ease-out;
+}
+.help__item:hover {
+  transform: scale(1.05);
+}
+
+.help__text {
+  margin-top: 30px;
 }
 
 .nav__list {
@@ -784,6 +870,7 @@ a {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
+  flex-direction: row;
   column-gap: 90px;
 }
 
@@ -791,10 +878,12 @@ a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-direction: row;
   flex-direction: column;
   background: #fafafa;
   border-radius: 10px;
   transition: all 0.5s ease-out;
+  cursor: pointer;
 }
 .slider__slide:hover {
   background: #ffffff;

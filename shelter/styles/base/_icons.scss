@@ -1,0 +1,45 @@
+.help__icon {
+  position: relative;
+  height: 60px;
+  width: 60px;
+
+  &::before {
+    @include content-before($width: 60px, $height: 60px);
+  }
+
+  &_1::before {
+    background: no-repeat url(../../assets/icons/help/icon-pet-food.svg);
+  }
+
+  &_2::before {
+    background: no-repeat url(../../assets/icons/help/icon-transportation.svg);
+  }
+
+  &_3::before {
+    background: no-repeat url(../../assets/icons/help/icon-toys.svg);
+  }
+
+  &_4::before {
+    background: no-repeat url(../../assets/icons/help/icon-bowls-and-cups.svg);
+  }
+
+  &_5::before {
+    background: no-repeat url(../../assets/icons/help/icon-shampoos.svg);
+  }
+
+  &_6::before {
+    background: no-repeat url(../../assets/icons/help/icon-vitamins.svg);
+  }
+
+  &_7::before {
+    background: no-repeat url(../../assets/icons/help/icon-medicines.svg);
+  }
+
+  &_8::before {
+    background: no-repeat url(../../assets/icons/help/icon-collars-leashes.svg);
+  }
+
+  &_9::before {
+    background: no-repeat url(../../assets/icons/help/icon-sleeping-area.svg);
+  }
+}

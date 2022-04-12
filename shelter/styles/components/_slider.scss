@@ -19,6 +19,7 @@
   background: $color-background-cards;
   border-radius: 10px;
   @include animation();
+  cursor: pointer;
 
   &:hover {
     background: $color-background;

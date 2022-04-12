@@ -6,10 +6,11 @@
   letter-spacing: $spacing;
 }
 
-@mixin flex($justify: flex-start, $align: stretch) {
+@mixin flex($justify: flex-start, $align: stretch, $flex-direction: row) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
+  flex-direction: $flex-direction;
 }
 
 @mixin animation($time: 0.5s) {
