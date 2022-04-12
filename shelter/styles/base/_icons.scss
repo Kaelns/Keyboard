@@ -50,3 +50,27 @@
   height: 23px;
   background: url(../../assets/icons/credit-card.svg) no-repeat center;
 }
+
+.footer__icon {
+  display: inline-block;
+  width: 40px;
+  height: 32px;
+
+  &_1 {
+    background: url(../../assets/icons/footer/mail.svg) no-repeat center;
+  }
+
+  &_2 {
+    background: url(../../assets/icons/footer/phone.svg) no-repeat center;
+  }
+
+  &_3,
+  &_4 {
+    width: 45px;
+    background: url(../../assets/icons/footer/pin.svg) no-repeat center;
+  }
+
+  &_4 {
+    width: 23px;
+  }
+}

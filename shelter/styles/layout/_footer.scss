@@ -1,0 +1,38 @@
+.footer__container {
+  @include flex($align: top);
+  padding-top: 40px;
+  column-gap: 160px;
+}
+.footer__contacts,
+.footer__location {
+  @include flex($justify: space-between, $flex-direction: column);
+  margin-top: 16px;
+  margin-bottom: 60px;
+}
+
+.footer__contacts {
+  max-width: 279px;
+}
+
+.footer__location {
+  max-width: 301px;
+}
+
+.footer__title {
+  color: $color-titles-on-background-dark;
+}
+
+.footer__link {
+  @extend %h4-style;
+  margin: 0;
+
+  &_wrapper {
+    @include flex($align: center);
+    column-gap: 20px;
+  }
+}
+
+.footer__img {
+  &_wrapper {
+  }
+}

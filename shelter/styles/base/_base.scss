@@ -16,7 +16,6 @@ html {
 h1,
 h2,
 h3,
-h4,
 h5 {
   @extend %font-family-1;
   cursor: default;
@@ -41,7 +40,7 @@ h3 {
 }
 
 h4 {
-  @include font(2rem, 2.3rem, 0.13rem);
+  @extend %h4-style;
 }
 
 h5 {

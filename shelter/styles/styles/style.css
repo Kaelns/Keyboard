@@ -362,12 +362,11 @@ ul {
   list-style: none;
 }
 
-.btn__card-num, .btn-oval,
+.btn-oval,
 .btn-oval_transparent, .logo__title, h1,
 h2,
 h3,
-h4,
-h5 {
+h5, .footer__link, .btn__card-num, h4 {
   font-family: Georgia, serif;
 }
 
@@ -380,6 +379,14 @@ h5 {
 .in-addition__container, .help__container, .our-friends__container, .about__container {
   padding-top: 80px;
   padding-bottom: 100px;
+}
+
+.footer__link, .btn__card-num, h4 {
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2.3rem;
+  letter-spacing: 0.13rem;
 }
 
 @font-face {
@@ -433,7 +440,6 @@ html {
 h1,
 h2,
 h3,
-h4,
 h5 {
   cursor: default;
 }
@@ -466,14 +472,6 @@ h3 {
   font-style: normal;
   line-height: 4.5rem;
   letter-spacing: 0.21rem;
-}
-
-h4 {
-  font-size: 2rem;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 2.3rem;
-  letter-spacing: 0.13rem;
 }
 
 h5 {
@@ -648,11 +646,6 @@ a {
 }
 
 .btn__card-num {
-  font-size: 2rem;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 2.3rem;
-  letter-spacing: 0.13rem;
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -717,6 +710,25 @@ a {
   width: 30px;
   height: 23px;
   background: url(../../assets/icons/credit-card.svg) no-repeat center;
+}
+
+.footer__icon {
+  display: inline-block;
+  width: 40px;
+  height: 32px;
+}
+.footer__icon_1 {
+  background: url(../../assets/icons/footer/mail.svg) no-repeat center;
+}
+.footer__icon_2 {
+  background: url(../../assets/icons/footer/phone.svg) no-repeat center;
+}
+.footer__icon_3, .footer__icon_4 {
+  width: 45px;
+  background: url(../../assets/icons/footer/pin.svg) no-repeat center;
+}
+.footer__icon_4 {
+  width: 23px;
 }
 
 .container {
@@ -891,6 +903,48 @@ a {
   max-width: 380px;
 }
 
+.footer__container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: top;
+  flex-direction: row;
+  padding-top: 40px;
+  column-gap: 160px;
+}
+
+.footer__contacts,
+.footer__location {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: column;
+  margin-top: 16px;
+  margin-bottom: 60px;
+}
+
+.footer__contacts {
+  max-width: 279px;
+}
+
+.footer__location {
+  max-width: 301px;
+}
+
+.footer__title {
+  color: #ffffff;
+}
+
+.footer__link {
+  margin: 0;
+}
+.footer__link_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 20px;
+}
+
 .nav__list {
   display: flex;
 }
@@ -968,6 +1022,10 @@ a {
 
 .slide__btn {
   margin: 30px 0;
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

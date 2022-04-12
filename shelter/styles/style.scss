@@ -1,8 +1,8 @@
 @import "base/normalize";
 
 @import "abstracts/constants";
-@import "abstracts/placeholders";
 @import "abstracts/mixins";
+@import "abstracts/placeholders";
 
 @import "base/typography";
 @import "base/base";
@@ -19,6 +19,8 @@
 @import "layout/our-friends";
 @import "layout/help";
 @import "layout/in-addition";
+@import "layout/footer";
 
 @import "components/navigation";
 @import "components/slider";
+@import "components/scrollbar";

@@ -10,3 +10,8 @@
   padding-top: 80px;
   padding-bottom: 100px;
 }
+
+%h4-style {
+  @extend %font-family-1;
+  @include font(2rem, 2.3rem, 0.13rem);
+}
