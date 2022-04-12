@@ -1,3 +1,7 @@
+button {
+  @extend %h4-style;
+}
+
 .btn-oval,
 .btn-oval_transparent {
   display: inline-block;
@@ -53,6 +57,7 @@
 
 .btn-round:disabled,
 .btn-round_transparent:disabled {
+  cursor: not-allowed;
   filter: brightness(0) saturate(100%) invert(91%) sepia(8%) saturate(10%)
     hue-rotate(322deg) brightness(93%) contrast(84%);
 }

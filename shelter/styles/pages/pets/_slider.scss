@@ -1,0 +1,15 @@
+.slider__container {
+  width: 100%;
+  margin: 60px 0;
+}
+
+.slider {
+  @include flex();
+  flex-wrap: wrap;
+  gap: 30px 40px;
+}
+
+.btn_container {
+  display: flex;
+  column-gap: 20px;
+}

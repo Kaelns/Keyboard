@@ -6,9 +6,3 @@
 .our-friends__title {
   text-align: center;
 }
-
-.slider__container {
-  @include flex($justify: space-between, $align: center);
-  width: 100%;
-  margin: 60px 0;
-}
