@@ -566,15 +566,18 @@ a {
   letter-spacing: 0.1rem;
   transition: all 0.5s ease-out;
 }
-
-.btn-oval_transparent {
-  background: transparent;
-}
-
 .btn-oval:hover,
 .btn-oval_transparent:hover {
   background: #fddcc4;
   border-color: #fddcc4;
+}
+.btn-oval:active,
+.btn-oval_transparent:active {
+  transform: scale(0.8);
+}
+
+.btn-oval_transparent {
+  background: transparent;
 }
 
 .btn-round,
@@ -589,28 +592,32 @@ a {
   cursor: pointer;
   transition: all 0.5s ease-out;
 }
-
-.btn-round_transparent {
-  background: transparent;
-}
-
 .btn-round:hover,
 .btn-round_transparent:hover {
   background: #fddcc4;
   border-color: #fddcc4;
 }
-
-.btn-oval:active,
 .btn-round:active,
-.btn-oval_transparent:active,
 .btn-round_transparent:active {
   transform: scale(0.8);
+}
+
+.btn-round_transparent {
+  background: transparent;
 }
 
 .btn-round:disabled,
 .btn-round_transparent:disabled {
   cursor: not-allowed;
   filter: brightness(0) saturate(100%) invert(91%) sepia(8%) saturate(10%) hue-rotate(322deg) brightness(93%) contrast(84%);
+}
+.btn-round:disabled:active,
+.btn-round_transparent:disabled:active {
+  transform: scale(1);
+}
+.btn-round:disabled:hover,
+.btn-round_transparent:disabled:hover {
+  background: transparent;
 }
 
 .arrow-left::before,
@@ -823,6 +830,10 @@ a {
   text-align: center;
 }
 
+.our-friends__link {
+  margin: 0;
+}
+
 .help__container {
   display: flex;
   justify-content: flex-start;
@@ -1008,6 +1019,9 @@ a {
 .slider__slide:hover {
   background: #ffffff;
 }
+.slider__slide:hover .btn-oval_transparent {
+  background: #fddcc4;
+}
 
 .slide-img__container {
   width: min(21.9vw, 270px);
@@ -1029,8 +1043,19 @@ a {
   width: 0;
 }
 
-.header {
-  padding-block: 25px;
+.header-pets {
+  position: fixed;
+  top: 0;
+  padding: 25px 0 10px 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background: rgba(255, 255, 255, 0.7725490196);
+}
+
+.block {
+  height: 120px;
 }
 
 .logo-pets__title {
@@ -1046,23 +1071,23 @@ a {
   color: #292929;
 }
 
-.nav__elem {
+.nav__elem_active .nav-pets__link {
+  color: #292929;
+}
+
+.nav-pets__link {
   color: #545454;
 }
-.nav__elem_active .nav__link {
+.nav-pets__link:hover {
   color: #292929;
 }
 
-.nav__link:hover {
-  color: #292929;
-}
-
-.slider__container {
+.slider-pets__container {
   width: 100%;
   margin: 60px 0;
 }
 
-.slider {
+.slider-pets {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;

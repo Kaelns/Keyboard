@@ -1,5 +1,16 @@
-.header {
-  padding-block: 25px;
+.header-pets {
+  position: fixed;
+  top: 0;
+  padding: 25px 0 10px 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background: $color-background-transparent;
+}
+
+.block {
+  height: 120px;
 }
 
 // Logo
@@ -22,16 +33,16 @@
 // Navigation
 
 .nav__elem {
-  color: $color-titles;
-
   &_active {
-    .nav__link {
+    .nav-pets__link {
       color: $color-subtitle-logo-pets;
     }
   }
 }
 
-.nav__link {
+.nav-pets__link {
+  color: $color-titles;
+
   &:hover {
     color: $color-subtitle-logo-pets;
   }
