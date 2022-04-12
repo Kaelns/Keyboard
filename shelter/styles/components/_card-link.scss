@@ -1,0 +1,19 @@
+.in-addition__card-link {
+}
+
+.in-addition__card-num {
+  @include flex($justify: center);
+  column-gap: 15px;
+  padding: 10px 15px;
+  border-radius: 9px;
+  background: $color-primary;
+  @include animation();
+
+  &:hover {
+    background: $color-primary-hover;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}

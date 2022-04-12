@@ -377,6 +377,11 @@ h5 {
   font-family: Arial, sans-serif;
 }
 
+.in-addition__container, .help__container, .our-friends__container, .about__container {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
 @font-face {
   font-family: "Georgia";
   src: url("../../assets/fonts/georgia/georgia-regular.ttf") format("truetype");
@@ -476,7 +481,7 @@ h5 {
   font-weight: 400;
   font-style: normal;
   line-height: 1.7rem;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.09rem;
 }
 
 .text {
@@ -684,10 +689,18 @@ a {
   background: no-repeat url(../../assets/icons/help/icon-sleeping-area.svg);
 }
 
+.in-addition__icon {
+  display: inline-block;
+  width: 30px;
+  height: 23px;
+  background: url(../../assets/icons/credit-card.svg) no-repeat center;
+}
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .header {
@@ -737,8 +750,6 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  padding-top: 80px;
-  padding-bottom: 100px;
 }
 
 .about__column_1 {
@@ -770,8 +781,6 @@ a {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  padding-top: 80px;
-  padding-bottom: 100px;
 }
 
 .our-friends__title {
@@ -788,8 +797,6 @@ a {
 }
 
 .help__container {
-  margin-top: 80px;
-  margin-bottom: 100px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -824,6 +831,41 @@ a {
 
 .help__text {
   margin-top: 30px;
+}
+
+.in-addition__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.in-addition__column_1 {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row;
+  flex: 1.13;
+}
+.in-addition__column_2 {
+  flex: 0.87;
+}
+
+.in-addition__img {
+  margin-left: 110px;
+}
+
+.in-addition__title {
+  margin-bottom: 20px;
+}
+
+.in-addition__subtitle,
+.in-addition__card-num {
+  margin-bottom: 15px;
+}
+
+.in-addition__text {
+  max-width: 380px;
 }
 
 .nav__list {
@@ -903,6 +945,24 @@ a {
 
 .slide__btn {
   margin: 30px 0;
+}
+
+.in-addition__card-num {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row;
+  column-gap: 15px;
+  padding: 10px 15px;
+  border-radius: 9px;
+  background: #f1cdb3;
+  transition: all 0.5s ease-out;
+}
+.in-addition__card-num:hover {
+  background: #fddcc4;
+}
+.in-addition__card-num:active {
+  transform: scale(0.9);
 }
 
 /*# sourceMappingURL=style.css.map */

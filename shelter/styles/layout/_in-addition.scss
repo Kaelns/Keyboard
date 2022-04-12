@@ -1,0 +1,32 @@
+.in-addition__container {
+  @include flex($justify: center, $align: center);
+  @extend %padding-container;
+}
+
+.in-addition__column {
+  &_1 {
+    @include flex($justify: center);
+    flex: 1.13;
+  }
+
+  &_2 {
+    flex: 0.87;
+  }
+}
+
+.in-addition__img {
+  margin-left: 110px;
+}
+
+.in-addition__title {
+  margin-bottom: 20px;
+}
+
+.in-addition__subtitle,
+.in-addition__card-num {
+  margin-bottom: 15px;
+}
+
+.in-addition__text {
+  max-width: 380px;
+}
