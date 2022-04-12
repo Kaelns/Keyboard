@@ -77,3 +77,22 @@
 .cross::before {
   background: no-repeat url(../../assets/icons/btn/cross.svg);
 }
+
+.btn__card-num {
+  @extend %font-family-1;
+  @include font(2rem, 2.3rem, 0.13rem);
+  @include flex($justify: center);
+  column-gap: 15px;
+  padding: 10px 15px;
+  border-radius: 9px;
+  background: $color-primary;
+  @include animation();
+
+  &:hover {
+    background: $color-primary-hover;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}

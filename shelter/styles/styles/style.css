@@ -362,7 +362,7 @@ ul {
   list-style: none;
 }
 
-.btn-oval,
+.btn__card-num, .btn-oval,
 .btn-oval_transparent, .logo__title, h1,
 h2,
 h3,
@@ -647,6 +647,29 @@ a {
   background: no-repeat url(../../assets/icons/btn/cross.svg);
 }
 
+.btn__card-num {
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2.3rem;
+  letter-spacing: 0.13rem;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row;
+  column-gap: 15px;
+  padding: 10px 15px;
+  border-radius: 9px;
+  background: #f1cdb3;
+  transition: all 0.5s ease-out;
+}
+.btn__card-num:hover {
+  background: #fddcc4;
+}
+.btn__card-num:active {
+  transform: scale(0.9);
+}
+
 .help__icon {
   position: relative;
   height: 60px;
@@ -860,7 +883,7 @@ a {
 }
 
 .in-addition__subtitle,
-.in-addition__card-num {
+.btn__card-num {
   margin-bottom: 15px;
 }
 
@@ -945,24 +968,6 @@ a {
 
 .slide__btn {
   margin: 30px 0;
-}
-
-.in-addition__card-num {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-direction: row;
-  column-gap: 15px;
-  padding: 10px 15px;
-  border-radius: 9px;
-  background: #f1cdb3;
-  transition: all 0.5s ease-out;
-}
-.in-addition__card-num:hover {
-  background: #fddcc4;
-}
-.in-addition__card-num:active {
-  transform: scale(0.9);
 }
 
 /*# sourceMappingURL=style.css.map */
