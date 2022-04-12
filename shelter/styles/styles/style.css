@@ -1028,4 +1028,32 @@ a {
   width: 0;
 }
 
+.header {
+  padding-block: 25px;
+}
+
+.logo-pets__title {
+  color: #545454;
+}
+
+.logo-pets__subtitle {
+  color: #292929;
+}
+
+.logo:hover .logo-pets__title,
+.logo:hover .logo-pets__subtitle {
+  color: #292929;
+}
+
+.nav__elem {
+  color: #545454;
+}
+.nav__elem_active .nav__link {
+  color: #292929;
+}
+
+.nav__link:hover {
+  color: #292929;
+}
+
 /*# sourceMappingURL=style.css.map */

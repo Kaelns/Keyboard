@@ -1,0 +1,38 @@
+.header {
+  padding-block: 25px;
+}
+
+// Logo
+
+.logo-pets__title {
+  color: $color-titles;
+}
+
+.logo-pets__subtitle {
+  color: $color-subtitle-logo-pets;
+}
+
+.logo:hover {
+  .logo-pets__title,
+  .logo-pets__subtitle {
+    color: $color-subtitle-logo-pets;
+  }
+}
+
+// Navigation
+
+.nav__elem {
+  color: $color-titles;
+
+  &_active {
+    .nav__link {
+      color: $color-subtitle-logo-pets;
+    }
+  }
+}
+
+.nav__link {
+  &:hover {
+    color: $color-subtitle-logo-pets;
+  }
+}
