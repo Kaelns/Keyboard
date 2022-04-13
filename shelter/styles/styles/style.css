@@ -569,7 +569,6 @@ a {
 .btn-oval:hover,
 .btn-oval_transparent:hover {
   background: #fddcc4;
-  border-color: #fddcc4;
 }
 .btn-oval:active,
 .btn-oval_transparent:active {
@@ -595,7 +594,6 @@ a {
 .btn-round:hover,
 .btn-round_transparent:hover {
   background: #fddcc4;
-  border-color: #fddcc4;
 }
 .btn-round:active,
 .btn-round_transparent:active {
@@ -618,6 +616,14 @@ a {
 .btn-round:disabled:hover,
 .btn-round_transparent:disabled:hover {
   background: transparent;
+}
+
+.btn-round-disabled:active {
+  transform: scale(1);
+}
+.btn-round-disabled:hover {
+  background: #f1cdb3;
+  border-color: #f1cdb3;
 }
 
 .arrow-left::before,

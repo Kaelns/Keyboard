@@ -9,16 +9,6 @@
   column-gap: 90px;
 }
 
-.slider__btn {
-  &_1 {
-    // margin-right: 53px;
-  }
-
-  &_2 {
-    // margin-left: 53px;
-  }
-}
-
 .slider__slide {
   @include flex($align: center);
   flex-direction: column;
