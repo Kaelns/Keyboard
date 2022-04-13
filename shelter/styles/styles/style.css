@@ -618,6 +618,9 @@ a {
   background: transparent;
 }
 
+.btn-round-disabled {
+  cursor: default;
+}
 .btn-round-disabled:active {
   transform: scale(1);
 }
