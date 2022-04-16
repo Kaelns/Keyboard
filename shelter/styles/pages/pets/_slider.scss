@@ -5,8 +5,13 @@
 
 .slider-pets {
   @include flex();
+  // $justify: space-between
   flex-wrap: wrap;
-  gap: 30px 40px;
+  gap: 30px calc((100% - (270px * 4)) / 3);
+
+  @media (max-width: 1159px) {
+    gap: 30px calc((100% - (270px * 3)) / 2);
+  }
 }
 
 .btn_container {

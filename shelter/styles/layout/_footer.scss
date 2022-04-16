@@ -25,10 +25,15 @@
 .footer__link {
   @extend %h4-style;
   margin: 0;
+  @include animation(0.3s);
 
   &_wrapper {
     @include flex($align: center);
     column-gap: 20px;
+  }
+
+  &:hover {
+    transform: scale(1.03);
   }
 }
 

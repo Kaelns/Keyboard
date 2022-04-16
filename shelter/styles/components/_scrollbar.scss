@@ -1,3 +1,26 @@
+/* width */
 ::-webkit-scrollbar {
-  width: 0;
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $color-background-end;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  border: 2px solid #7e4118;
+  background: #926648;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffae78;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

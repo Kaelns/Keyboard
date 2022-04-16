@@ -12,17 +12,24 @@
   text-align: end;
 }
 
+.logo,
 .logo__title,
 .logo__subtitle {
   @include animation();
 }
 
-.logo:hover {
-  .logo__title {
-    color: $color-primary-hover;
-  }
+.logo {
+  display: inline-block;
 
-  .logo__subtitle {
-    color: $color-links-hover;
+  &:hover {
+    transform: scale(1.03);
+
+    .logo__title {
+      color: $color-primary-hover;
+    }
+
+    .logo__subtitle {
+      color: $color-links-hover;
+    }
   }
 }

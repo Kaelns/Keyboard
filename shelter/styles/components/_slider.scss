@@ -19,6 +19,7 @@
 
   &:hover {
     background: $color-background;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 
     .btn-oval_transparent {
       background: $color-primary-hover;
@@ -26,12 +27,18 @@
   }
 }
 
-.slide-img__container {
-  width: min(21.9vw, 270px);
+// .slide-img__container {
+//   // width: min(21.9vw, 270px);
+// }
+
+.slider__slide {
+  width: 270px;
+  height: 435px;
 }
 
 .slide__img {
   width: 100%;
+  border-radius: 10px;
 }
 
 .slide__title {
