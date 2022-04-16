@@ -1,5 +1,10 @@
 button {
   @extend %h4-style;
+  cursor: pointer;
+}
+
+.btn-oval:hover {
+  transform: scale(1.03);
 }
 
 .btn-oval,
@@ -9,7 +14,7 @@ button {
   border-radius: 26px;
   background: $color-primary;
   border: 2px solid $color-primary;
-  cursor: pointer;
+
   @extend %font-family-1;
   @include font(1.7rem, 2.2rem, 0.1rem);
   @include animation();
@@ -36,7 +41,7 @@ button {
   border-radius: 100%;
   background: $color-primary;
   border: 2px solid $color-primary;
-  cursor: pointer;
+
   @include animation();
 
   &:hover {
@@ -110,6 +115,7 @@ button {
   @include animation();
 
   &:hover {
+    transform: scale(1.03);
     background: $color-primary-hover;
   }
 
