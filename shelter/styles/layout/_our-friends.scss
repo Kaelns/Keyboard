@@ -4,7 +4,7 @@
 
   // Todo @media Mobile _______________
   @include media-mobile {
-    padding-block: 42px;
+    @include padding-block();
   }
 }
 

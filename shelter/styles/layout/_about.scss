@@ -10,7 +10,7 @@
 
   // Todo @media Mobile _______________
   @include media-mobile {
-    padding-block: 42px;
+    @include padding-block();
     row-gap: 42px;
   }
 }

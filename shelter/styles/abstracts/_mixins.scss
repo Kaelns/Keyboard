@@ -27,6 +27,10 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin padding-block($start: 42px, $end: 42px) {
+  padding-block: $start $end;
+}
+
 @mixin media($breakpoint) {
   @media (max-width: ($breakpoint)) {
     @content;

@@ -3,44 +3,68 @@
   height: 60px;
   width: 60px;
 
+  // Todo @media Mobile _______________
+  @include media-mobile {
+    height: 50px;
+    width: 50px;
+  }
+
   &::before {
     @include content-before($width: 60px, $height: 60px);
+
+    // Todo @media Mobile _______________
+    @include media-mobile {
+      @include content-before($width: 50px, $height: 50px);
+    }
   }
 
   &_1::before {
-    background: no-repeat url(../../assets/icons/help/icon-pet-food.svg);
+    background: no-repeat center url(../../assets/icons/help/icon-pet-food.svg);
+    background-size: contain;
   }
 
   &_2::before {
-    background: no-repeat url(../../assets/icons/help/icon-transportation.svg);
+    background: no-repeat center
+      url(../../assets/icons/help/icon-transportation.svg);
+    background-size: contain;
   }
 
   &_3::before {
-    background: no-repeat url(../../assets/icons/help/icon-toys.svg);
+    background: no-repeat center url(../../assets/icons/help/icon-toys.svg);
+    background-size: contain;
   }
 
   &_4::before {
-    background: no-repeat url(../../assets/icons/help/icon-bowls-and-cups.svg);
+    background: no-repeat center
+      url(../../assets/icons/help/icon-bowls-and-cups.svg);
+    background-size: contain;
   }
 
   &_5::before {
-    background: no-repeat url(../../assets/icons/help/icon-shampoos.svg);
+    background: no-repeat center url(../../assets/icons/help/icon-shampoos.svg);
+    background-size: contain;
   }
 
   &_6::before {
-    background: no-repeat url(../../assets/icons/help/icon-vitamins.svg);
+    background: no-repeat center url(../../assets/icons/help/icon-vitamins.svg);
+    background-size: contain;
   }
 
   &_7::before {
-    background: no-repeat url(../../assets/icons/help/icon-medicines.svg);
+    background: no-repeat center url(../../assets/icons/help/icon-medicines.svg);
+    background-size: contain;
   }
 
   &_8::before {
-    background: no-repeat url(../../assets/icons/help/icon-collars-leashes.svg);
+    background: no-repeat center
+      url(../../assets/icons/help/icon-collars-leashes.svg);
+    background-size: contain;
   }
 
   &_9::before {
-    background: no-repeat url(../../assets/icons/help/icon-sleeping-area.svg);
+    background: no-repeat center
+      url(../../assets/icons/help/icon-sleeping-area.svg);
+    background-size: contain;
   }
 }
 

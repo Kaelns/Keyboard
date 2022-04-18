@@ -699,6 +699,12 @@ button {
   height: 60px;
   width: 60px;
 }
+@media (max-width: 767px) {
+  .help__icon {
+    height: 50px;
+    width: 50px;
+  }
+}
 .help__icon::before {
   content: "";
   position: absolute;
@@ -708,32 +714,52 @@ button {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+@media (max-width: 767px) {
+  .help__icon::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 .help__icon_1::before {
-  background: no-repeat url(../../assets/icons/help/icon-pet-food.svg);
+  background: no-repeat center url(../../assets/icons/help/icon-pet-food.svg);
+  background-size: contain;
 }
 .help__icon_2::before {
-  background: no-repeat url(../../assets/icons/help/icon-transportation.svg);
+  background: no-repeat center url(../../assets/icons/help/icon-transportation.svg);
+  background-size: contain;
 }
 .help__icon_3::before {
-  background: no-repeat url(../../assets/icons/help/icon-toys.svg);
+  background: no-repeat center url(../../assets/icons/help/icon-toys.svg);
+  background-size: contain;
 }
 .help__icon_4::before {
-  background: no-repeat url(../../assets/icons/help/icon-bowls-and-cups.svg);
+  background: no-repeat center url(../../assets/icons/help/icon-bowls-and-cups.svg);
+  background-size: contain;
 }
 .help__icon_5::before {
-  background: no-repeat url(../../assets/icons/help/icon-shampoos.svg);
+  background: no-repeat center url(../../assets/icons/help/icon-shampoos.svg);
+  background-size: contain;
 }
 .help__icon_6::before {
-  background: no-repeat url(../../assets/icons/help/icon-vitamins.svg);
+  background: no-repeat center url(../../assets/icons/help/icon-vitamins.svg);
+  background-size: contain;
 }
 .help__icon_7::before {
-  background: no-repeat url(../../assets/icons/help/icon-medicines.svg);
+  background: no-repeat center url(../../assets/icons/help/icon-medicines.svg);
+  background-size: contain;
 }
 .help__icon_8::before {
-  background: no-repeat url(../../assets/icons/help/icon-collars-leashes.svg);
+  background: no-repeat center url(../../assets/icons/help/icon-collars-leashes.svg);
+  background-size: contain;
 }
 .help__icon_9::before {
-  background: no-repeat url(../../assets/icons/help/icon-sleeping-area.svg);
+  background: no-repeat center url(../../assets/icons/help/icon-sleeping-area.svg);
+  background-size: contain;
 }
 
 .in-addition__icon {
@@ -954,7 +980,7 @@ button {
 }
 @media (max-width: 767px) {
   .about__container {
-    padding-block: 42px;
+    padding-block: 42px 42px;
     row-gap: 42px;
   }
 }
@@ -1028,7 +1054,7 @@ button {
 }
 @media (max-width: 767px) {
   .our-friends__container {
-    padding-block: 42px;
+    padding-block: 42px 42px;
   }
 }
 
@@ -1056,10 +1082,30 @@ button {
   align-items: center;
   flex-direction: column;
 }
+@media (max-width: 767px) {
+  .help__container {
+    padding-block: 42px 42px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 3.25rem;
+    letter-spacing: 0.16rem;
+  }
+}
 
 .help__title {
   margin-bottom: 60px;
   text-align: center;
+}
+@media (max-width: 767px) {
+  .help__title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 3.25rem;
+    letter-spacing: 0.16rem;
+    margin-block-end: 41px;
+  }
 }
 
 .help__list {
@@ -1070,6 +1116,20 @@ button {
   flex-wrap: wrap;
   column-gap: 118.5px;
   row-gap: 55px;
+}
+@media (max-width: 1279px) {
+  .help__list {
+    display: grid;
+    width: 100%;
+    grid-gap: max(7.16vw, 55px) max(7.81vw, 60px);
+    grid-template-columns: repeat(3, 170px);
+  }
+}
+@media (max-width: 767px) {
+  .help__list {
+    grid-gap: max(9.37vw, 30px);
+    grid-template-columns: repeat(2, 130px);
+  }
 }
 
 .help__item {
@@ -1082,9 +1142,18 @@ button {
 .help__item:hover {
   transform: scale(1.05);
 }
-
 .help__text {
   margin-top: 30px;
+}
+@media (max-width: 767px) {
+  .help__text {
+    margin-block-start: 20px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.7rem;
+    letter-spacing: 0.09rem;
+  }
 }
 
 .in-addition__container {
