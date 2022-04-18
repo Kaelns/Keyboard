@@ -1,6 +1,18 @@
 .in-addition__container {
   @include flex($justify: center, $align: center);
   @extend %padding-container;
+
+  // * @media Tablet __________________
+  @include media-tablet {
+    flex-direction: column-reverse;
+    row-gap: 60px;
+  }
+
+  // Todo @media Mobile _______________
+  @include media-mobile {
+    @include padding-block();
+    row-gap: 42px;
+  }
 }
 
 .in-addition__column {
@@ -11,22 +23,72 @@
 
   &_2 {
     flex: 0.87;
+
+    // Todo @media Mobile _______________
+    @include media-mobile {
+      @include flex($flex-direction: column);
+    }
   }
 }
 
 .in-addition__img {
   margin-left: 110px;
+
+  // * @media Tablet __________________
+  @include media-tablet {
+    margin: 0;
+  }
+
+  // Todo @media Mobile _______________
+  @include media-mobile {
+    width: min(81.25vw, 260px);
+  }
 }
 
 .in-addition__title {
   margin-bottom: 20px;
+
+  // Todo @media Mobile _______________
+  @include media-mobile {
+    @include font(2.5rem, 3.25rem, 0.16rem);
+    max-width: 260px;
+    text-align: center;
+    align-self: center;
+  }
+}
+
+.in-addition__card-link {
+  // Todo @media Mobile _______________
+  @include media-mobile {
+    align-self: center;
+  }
 }
 
 .in-addition__subtitle,
 .btn__card-num {
   margin-bottom: 15px;
+
+  // Todo @media Mobile _______________
+  @include media-mobile {
+    @include font(1.5rem, 1.7rem, 0.09rem);
+    align-self: center;
+  }
+}
+
+.in-addition__subtitle {
+  // Todo @media Mobile _______________
+  @include media-mobile {
+    @include font(1.5rem, 2.4rem, 0);
+  }
 }
 
 .in-addition__text {
   max-width: 380px;
+
+  // Todo @media Mobile _______________
+  @include media-mobile {
+    max-width: 280px;
+    margin-inline: 10px;
+    text-align: justify;
+  }
 }
