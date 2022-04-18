@@ -1,10 +1,21 @@
 .our-friends__container {
   @include flex($align: center, $flex-direction: column);
   @extend %padding-container;
+
+  // Todo @media Mobile _______________
+  @include media-mobile {
+    padding-block: 42px;
+  }
 }
 
 .our-friends__title {
   text-align: center;
+
+  // Todo @media Mobile _______________
+  @include media-mobile {
+    @include font(2.5rem, 3.25rem, 0.16rem);
+    align-self: center;
+  }
 }
 
 .our-friends__link {
