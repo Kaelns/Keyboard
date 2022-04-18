@@ -2,21 +2,61 @@ $slide-width: 270px;
 
 .slider-pets__container {
   width: 100%;
-  margin: 60px 0;
+  padding-block: 60px;
+
+  // * @media Tablet __________________
+  @include media-tablet {
+    padding-block: 30px 40px;
+  }
+
+  // Todo @media Mobile _______________
+  @include media-mobile {
+    @include padding-block();
+  }
 }
 
 .slider-pets {
-  @include flex();
-  // $justify: space-between
-  flex-wrap: wrap;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, $slide-width);
   gap: 30px calc((100% - ($slide-width * 4)) / 3);
+  justify-content: center;
 
-  @media (max-width: 1159px) {
-    gap: 30px calc((100% - ($slide-width * 3)) / 2);
+  // * @media Tablet __________________
+  @include media-tablet {
+    grid-template-columns: repeat(2, $slide-width);
+    gap: 30px max(5.2vw, 40px);
+  }
+
+  // Todo @media Mobile _______________
+  @include media-mobile {
+    grid-template-columns: $slide-width;
+    gap: 30px 0;
+  }
+}
+
+.slide-pets {
+  // * @media Tablet __________________
+  @include media-tablet {
+    &:nth-last-child(-n + 2) {
+      display: none;
+    }
+  }
+
+  // Todo @media Mobile _______________
+  @include media-mobile {
+    &:nth-last-child(-n + 5) {
+      display: none;
+    }
   }
 }
 
 .btn_container {
   display: flex;
   column-gap: 20px;
+
+  // Todo @media Mobile _______________
+  @include media-mobile {
+    column-gap: 10px;
+  }
 }

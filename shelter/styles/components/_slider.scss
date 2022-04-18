@@ -38,7 +38,10 @@
       background: $color-primary-hover;
     }
   }
+}
+// Main page______________
 
+.slide {
   // * @media Tablet __________________
   @include media-tablet {
     &:nth-child(3) {
@@ -53,6 +56,8 @@
     }
   }
 }
+
+// Main page end______________
 
 .slider__btn {
   // Todo @media Mobile _______________
