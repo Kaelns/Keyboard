@@ -1,3 +1,5 @@
+$slide-width: 270px;
+
 .slider-pets__container {
   width: 100%;
   margin: 60px 0;
@@ -7,10 +9,10 @@
   @include flex();
   // $justify: space-between
   flex-wrap: wrap;
-  gap: 30px calc((100% - (270px * 4)) / 3);
+  gap: 30px calc((100% - ($slide-width * 4)) / 3);
 
   @media (max-width: 1159px) {
-    gap: 30px calc((100% - (270px * 3)) / 2);
+    gap: 30px calc((100% - ($slide-width * 3)) / 2);
   }
 }
 

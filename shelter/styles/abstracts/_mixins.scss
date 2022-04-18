@@ -13,8 +13,8 @@
   flex-direction: $flex-direction;
 }
 
-@mixin animation($time: 0.5s) {
-  transition: all $time ease-out;
+@mixin animation($time: 0.5s, $prop: all) {
+  transition: $prop $time ease-out;
 }
 
 @mixin content-before($width, $height) {
@@ -25,4 +25,22 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+@mixin media($breakpoint) {
+  @media (max-width: ($breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: ($content-width - 1)) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: ($tablet-width - 1)) {
+    @content;
+  }
 }

@@ -421,6 +421,7 @@ h5, .footer__link, .btn__card-num, button, h4 {
 }
 html {
   font-size: 10px;
+  overflow-y: scroll;
 }
 
 .body {
@@ -595,7 +596,6 @@ button {
 
 .btn-round,
 .btn-round_transparent {
-  position: relative;
   font-size: 2rem;
   width: 52px;
   height: 52px;
@@ -762,14 +762,77 @@ button {
   width: 23px;
 }
 
+.burger-menu {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .burger-menu {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 28px;
+    margin-right: 43px;
+    cursor: pointer;
+    /* &._active span {
+      transform: scale(0) translate(0, -50%);
+    }
+
+    &._active::before {
+      top: 50%;
+      transform: rotate(-45deg) translate(0, -50%);
+    }
+
+    &._active::after {
+      bottom: 50%;
+      transform: rotate(45deg) translate(0, 50%);
+    } */
+  }
+  .burger-menu span, .burger-menu::before, .burger-menu::after {
+    left: 0;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #ffffff;
+    transition: all 0.5s ease-out;
+  }
+  .burger-menu::before, .burger-menu::after {
+    content: "";
+  }
+  .burger-menu::before {
+    top: 3.5px;
+  }
+  .burger-menu::after {
+    bottom: 3.5px;
+  }
+  .burger-menu span {
+    top: 50%;
+    transform: scale(1) translate(0, -50%);
+  }
+}
 .container {
   max-width: 1280px;
   margin: 0 auto;
   padding-inline: 40px;
 }
+@media (max-width: 1279px) {
+  .container {
+    padding-inline: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    padding-inline: 10px;
+  }
+}
 
 .header {
-  padding: 55px 0;
+  padding-block: 55px;
+}
+@media (max-width: 1279px) {
+  .header {
+    padding-block-start: 25px;
+  }
 }
 
 .header__container {
@@ -777,6 +840,11 @@ button {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+}
+@media (max-width: 1279px) {
+  .header__container {
+    position: relative;
+  }
 }
 
 .not-only__container {
@@ -974,6 +1042,12 @@ button {
   transform: scale(1.03);
 }
 
+@media (max-width: 767px) {
+  .nav {
+    display: none;
+  }
+}
+
 .nav__list {
   display: flex;
 }
@@ -1101,7 +1175,7 @@ button {
 .header-pets {
   position: fixed;
   top: 0;
-  padding: 25px 0 10px 0;
+  padding-block: 25px 10px;
   width: 100%;
   z-index: 1000;
   border-bottom-left-radius: 30px;
@@ -1159,6 +1233,10 @@ button {
 .btn_container {
   display: flex;
   column-gap: 20px;
+}
+
+.burger-menu span, .burger-menu::before, .burger-menu::after {
+  background: #000000;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,7 @@
+.burger-menu {
+  span,
+  &::before,
+  &::after {
+    background: $color-burger-dark;
+  }
+}
