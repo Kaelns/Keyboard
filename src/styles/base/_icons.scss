@@ -19,51 +19,51 @@
   }
 
   &_1::before {
-    background: no-repeat center url(../../assets/icons/help/icon-pet-food.svg);
+    background: no-repeat center url(.././assets/icons/help/icon-pet-food.svg);
     background-size: contain;
   }
 
   &_2::before {
     background: no-repeat center
-      url(../../assets/icons/help/icon-transportation.svg);
+      url(.././assets/icons/help/icon-transportation.svg);
     background-size: contain;
   }
 
   &_3::before {
-    background: no-repeat center url(../../assets/icons/help/icon-toys.svg);
+    background: no-repeat center url(.././assets/icons/help/icon-toys.svg);
     background-size: contain;
   }
 
   &_4::before {
     background: no-repeat center
-      url(../../assets/icons/help/icon-bowls-and-cups.svg);
+      url(.././assets/icons/help/icon-bowls-and-cups.svg);
     background-size: contain;
   }
 
   &_5::before {
-    background: no-repeat center url(../../assets/icons/help/icon-shampoos.svg);
+    background: no-repeat center url(.././assets/icons/help/icon-shampoos.svg);
     background-size: contain;
   }
 
   &_6::before {
-    background: no-repeat center url(../../assets/icons/help/icon-vitamins.svg);
+    background: no-repeat center url(.././assets/icons/help/icon-vitamins.svg);
     background-size: contain;
   }
 
   &_7::before {
-    background: no-repeat center url(../../assets/icons/help/icon-medicines.svg);
+    background: no-repeat center url(.././assets/icons/help/icon-medicines.svg);
     background-size: contain;
   }
 
   &_8::before {
     background: no-repeat center
-      url(../../assets/icons/help/icon-collars-leashes.svg);
+      url(.././assets/icons/help/icon-collars-leashes.svg);
     background-size: contain;
   }
 
   &_9::before {
     background: no-repeat center
-      url(../../assets/icons/help/icon-sleeping-area.svg);
+      url(.././assets/icons/help/icon-sleeping-area.svg);
     background-size: contain;
   }
 }
@@ -72,7 +72,7 @@
   display: inline-block;
   width: 30px;
   height: 23px;
-  background: url(../../assets/icons/credit-card.svg) no-repeat center;
+  background: url(.././assets/icons/credit-card.svg) no-repeat center;
 }
 
 .footer__icon {
@@ -81,17 +81,17 @@
   height: 32px;
 
   &_1 {
-    background: url(../../assets/icons/footer/mail.svg) no-repeat center;
+    background: url(.././assets/icons/footer/mail.svg) no-repeat center;
   }
 
   &_2 {
-    background: url(../../assets/icons/footer/phone.svg) no-repeat center;
+    background: url(.././assets/icons/footer/phone.svg) no-repeat center;
   }
 
   &_3,
   &_4 {
     width: 45px;
-    background: url(../../assets/icons/footer/pin.svg) no-repeat center;
+    background: url(.././assets/icons/footer/pin.svg) no-repeat center;
   }
 
   &_4 {
