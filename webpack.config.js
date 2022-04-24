@@ -119,7 +119,7 @@ module.exports = {
         // * Webpack goes from right to left
         use: [
           // * Style-loader adds styles to the head section and plugin in a separate file
-          isItDev("style-loader", MiniCssExtractPlugin.loader),
+          /* isItDev("style-loader",  */ MiniCssExtractPlugin.loader,
           "css-loader",
           // * Styles from different browsers
           {
@@ -141,11 +141,18 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg|jpeg|svg|gif|ico)$/,
+        test: /\.(png|jpg|jpeg)$/,
         // * Webpack 5 allows us not to use third-party loaders  https://webpack.js.org/guides/asset-modules/#root
         type: "asset/resource",
         generator: {
           filename: "assets/images/[name][ext]",
+        },
+      },
+      {
+        test: /\.(svg|gif|ico)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/icons/[name][ext]",
         },
       },
       {

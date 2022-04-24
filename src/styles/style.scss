@@ -11,7 +11,7 @@
 @import "base/links";
 @import "base/buttons";
 @import "base/icons";
-@import "base/burger";
+@import "base/burger-btn";
 
 @import "layout/container";
 @import "layout/header";
@@ -22,11 +22,12 @@
 @import "layout/in-addition";
 @import "layout/footer";
 
-@import "components/navigation";
+@import "components/navigation-burger";
 @import "components/slider";
 @import "components/scrollbar";
+@import "components/popup";
 
 @import "pages/pets/header-entire";
 @import "pages/pets/slider";
-@import "pages/pets/burger";
+@import "pages/pets/burger-btn";
 @import "pages/pets/our-friends";
