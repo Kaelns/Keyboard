@@ -26,7 +26,10 @@ export class CreatePopupCard {
   // PopupCard generator
   generatePopupCard() {
     let template = "";
+    let fragment = document.createDocumentFragment();
     let popupCard = document.createElement("div");
+    let popupCard2 = document.createElement("div");
+    popupCard2.className = "popup__close";
     popupCard.className = "popup__body";
 
     template += '<div class="popup__content">';
@@ -50,19 +53,27 @@ export class CreatePopupCard {
     // +3
     template +=
       '<li class="popup__parameter popup__parameter_1 parameter__wrapper">Age: ';
+    template += '<h5 class="modal-text">';
     template += `${this.age}`;
+    template += "</h5>";
 
     template +=
       '<li class="popup__parameter popup__parameter_2 parameter__wrapper">Inoculations: ';
+    template += '<h5 class="modal-text">';
     template += `${this.inoculations.join(", ")}`;
+    template += "</h5>";
 
     template +=
       '<li class="popup__parameter popup__parameter_3 parameter__wrapper">Diseases: ';
+    template += '<h5 class="modal-text">';
     template += `${this.diseases.join(", ")}`;
+    template += "</h5>";
 
     template +=
       '<li class="popup__parameter popup__parameter_4 parameter__wrapper">Parasites: ';
+    template += '<h5 class="modal-text">';
     template += `${this.parasites.join(", ")}`;
+    template += "</h5>";
     // template += `${...this.parasites}`;
 
     // +3
@@ -75,7 +86,8 @@ export class CreatePopupCard {
     template += "</div>";
 
     popupCard.innerHTML = template;
-    return popupCard;
+    fragment.append(popupCard, popupCard2);
+    return fragment;
 
     /* let template = ` <div class="popup__body">
     <div class="popup__content">
