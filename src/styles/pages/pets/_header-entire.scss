@@ -3,7 +3,7 @@
   top: 0;
   padding-block: 25px 10px;
   width: 100%;
-  z-index: 1000;
+  z-index: 1;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   background: $color-background-transparent;
@@ -38,6 +38,15 @@
       color: $color-subtitle-logo-pets;
     }
   }
+
+  // Todo @media Mobile _______________
+  @include media-mobile {
+    &_active {
+      .nav-pets__link {
+        color: $color-links-hover;
+      }
+    }
+  }
 }
 
 .nav-pets__link {
@@ -45,5 +54,14 @@
 
   &:hover {
     color: $color-subtitle-logo-pets;
+  }
+
+  // Todo @media Mobile _______________
+  @include media-mobile {
+    color: $color-links;
+
+    &:hover {
+      color: $color-links-hover;
+    }
   }
 }

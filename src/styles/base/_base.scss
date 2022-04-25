@@ -1,9 +1,9 @@
 html {
   font-size: 10px;
-}
 
-._no-scroll {
-  overflow-y: hidden;
+  &._no-scroll {
+    overflow-y: hidden;
+  }
 }
 
 .body {

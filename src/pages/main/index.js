@@ -1,11 +1,12 @@
 import "../../styles/style.scss";
-// import JSON from "../../assets/pets.json";
 import { listenCardToCreatePopup } from "../../script/components/Popup";
+import { addListenerToBurgerBtn } from "../../script/components/Burger";
 
 window.onload = function () {
   // alert(
   //   "Hi, whoever you are, give me one more day because there's not much left)"
   // );
+  addListenerToBurgerBtn();
   listenCardToCreatePopup();
 };
 
