@@ -1,6 +1,8 @@
 import "../../styles/style.scss";
+
 import { listenCardToCreatePopup } from "../../script/components/Popup";
 import { addListenerToBurgerBtn } from "../../script/components/Burger";
+import { createSlider } from "../../script/components/Slider";
 
 window.onload = function () {
   // alert(
@@ -8,6 +10,5 @@ window.onload = function () {
   // );
   addListenerToBurgerBtn();
   listenCardToCreatePopup();
+  createSlider("main");
 };
-
-// console.log(new CreatePopupCard(JSON[0]).generatePopupCard());
