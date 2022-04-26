@@ -48,3 +48,8 @@
     @content;
   }
 }
+
+@mixin animation-keyframes($move) {
+  animation-name: $move;
+  animation-duration: 1s;
+}

@@ -1,6 +1,6 @@
 $slide-width: 270px;
 
-.slider-pets__container {
+.slider-pets__wrapper {
   width: 100%;
   padding-block: 60px;
 
@@ -16,10 +16,9 @@ $slide-width: 270px;
 }
 
 .slider-pets {
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, $slide-width);
-  gap: 30px calc((100% - ($slide-width * 4)) / 3);
+  gap: 30px calc((1200px - ($slide-width * 4)) / 3);
   justify-content: center;
 
   // * @media Tablet __________________
