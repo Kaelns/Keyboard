@@ -13,7 +13,6 @@ const listenCardToCreatePopup = () => {
 
     let cardId = card.getAttribute("data-id");
 
-    console.log(cardId);
     showPopup(cardId);
   });
 };

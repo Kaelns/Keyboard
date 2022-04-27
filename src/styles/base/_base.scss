@@ -1,8 +1,11 @@
 html {
   font-size: 10px;
+  width: 100vw;
+  overflow-x: hidden;
 
   &._no-scroll {
     overflow-y: hidden;
+    // padding-right: 8px;
   }
 }
 

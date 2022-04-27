@@ -13,7 +13,7 @@ export class CreateCard {
     card.dataset.id = this.id;
 
     template += '<div class="slide-img__container">';
-    template += `<img loading="lazy" class="slide__img" src="${this.img}" alt="dog"/>`;
+    template += `<img class="slide__img" src="${this.img}" alt="dog"/>`;
     template += "</div>";
 
     template += ` <h4 class="slide__title">${this.name}</h4>`;

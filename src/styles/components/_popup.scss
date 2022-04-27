@@ -12,6 +12,7 @@
   overflow-x: hidden;
   @include animation();
   z-index: 100;
+  padding-right: 8px;
 }
 
 .popup-blackout._open {
@@ -21,6 +22,7 @@
 
 .popup__body {
   min-height: 100%;
+  width: 100vw;
   @include flex($justify: center, $align: center);
 }
 
@@ -51,7 +53,7 @@
   // Todo @media Mobile _______________
   @include media-mobile {
     justify-content: center;
-    max-width: 420px;
+    max-width: 260px;
   }
 }
 
@@ -69,6 +71,11 @@
   right: 0;
   top: 0;
   transform: translate(80%, -120%);
+
+  // Todo @media Mobile _______________
+  @include media-mobile {
+    transform: translate(50%, -105%);
+  }
 }
 
 .popup__column {
@@ -89,17 +96,18 @@
   }
 
   &_2 {
-    margin: 0 20px 20px 10px;
+    padding: 0 20px 20px 10px;
     max-width: 350px;
 
     // * @media Tablet __________________
     @include media-tablet {
-      margin: 0 10px 20px 10px;
+      padding: 0 10px 20px 10px;
     }
 
     // Todo @media Mobile _______________
     @include media-mobile {
-      margin: 10px;
+      max-width: 260px;
+      padding: 10px;
     }
   }
 }
