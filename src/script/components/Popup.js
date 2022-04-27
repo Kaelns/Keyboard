@@ -34,7 +34,7 @@ function createAndCacheCard(id) {
 }
 
 function insertCreatedCardToPopup(id, popup) {
-  popup.append(createdCards[id]);
+  popup.append(createdCards[id].cloneNode(true));
   lastInsertedCard = id;
 }
 
@@ -52,7 +52,22 @@ function toggleStyles(popup) {
 }
 
 function listenToClosePopup(popup) {
+  let popupClose = document.querySelector(".popup__close");
   popup.addEventListener("click", event(popup));
+
+  // * inspects hover
+  popupClose.onmouseover = popupClose.onmouseout = btnStylesHandler;
+}
+
+function btnStylesHandler(event) {
+  let popupBtn = document.querySelector("#popup__btn");
+
+  if (event.type == "mouseover") {
+    popupBtn.classList.add("hover-btn");
+  }
+  if (event.type == "mouseout") {
+    popupBtn.classList.remove("hover-btn");
+  }
 }
 
 function event(popup) {

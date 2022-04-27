@@ -35,6 +35,10 @@
   transition: all 0.7s ease-out;
 }
 
+.popup__btn.hover-btn {
+  background: $color-primary-hover;
+}
+
 .popup__content {
   position: relative;
   @include flex($justify: space-between, $align: center);

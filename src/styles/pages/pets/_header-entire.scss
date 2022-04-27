@@ -30,6 +30,12 @@
   }
 }
 
+.nav-pets {
+  @include media-mobile {
+    background-color: $color-background-light;
+  }
+}
+
 // Navigation
 
 .nav__elem {
@@ -39,14 +45,14 @@
     }
   }
 
-  // Todo @media Mobile _______________
+  /*   // Todo @media Mobile _______________
   @include media-mobile {
     &_active {
       .nav-pets__link {
         color: $color-links-hover;
       }
     }
-  }
+  } */
 }
 
 .nav-pets__link {
@@ -56,12 +62,12 @@
     color: $color-subtitle-logo-pets;
   }
 
-  // Todo @media Mobile _______________
+  /*   // Todo @media Mobile _______________
   @include media-mobile {
     color: $color-links;
 
     &:hover {
       color: $color-links-hover;
     }
-  }
+  } */
 }

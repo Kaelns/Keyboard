@@ -24,7 +24,8 @@ h1,
 h2,
 h3,
 h5,
-.h5-modal {
+.h5-modal,
+.h1-burger {
   @extend %font-family-1;
   cursor: default;
 }
@@ -35,7 +36,8 @@ h5 {
   color: $color-titles;
 }
 
-h1 {
+h1,
+.h1-burger {
   @include font(3.2rem, 3.5rem, 0.06rem);
 }
 

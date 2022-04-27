@@ -36,7 +36,7 @@ export class CreatePopupCard {
     // +1
     template += '<div class="popup-btn__wrapper">';
     template +=
-      '<button class="popup__btn btn-round_transparent cross"></button>';
+      '<button class="btn-round_transparent popup__btn cross" id="popup__btn"></button>';
     template += "</div>";
 
     template += `<img class="popup__column_1" src="${this.img}" alt="dog"/>`;

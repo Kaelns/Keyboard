@@ -3,7 +3,7 @@ $nav-width: 320px;
 .nav {
   // Todo @media Mobile _______________
   @include media-mobile {
-    @include flex($justify: center, $align: center);
+    @include flex($justify: center, $align: center, $flex-direction: column);
     position: fixed;
     right: -$nav-width;
     top: 0;
