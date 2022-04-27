@@ -1,10 +1,12 @@
 let isLinkClicked = true;
+const TABLE_WINDOW_WIDTH = 768;
+// let windowWidth = document.documentElement.clientWidth;
 
 export function addListenerToBurgerBtn() {
   let html = document.querySelector("html");
   let burgerBtn = document.querySelector(".burger-menu");
   let blackout = document.querySelector(".blackout");
-  let nav = document.querySelector(".nav");
+  let nav = document.querySelector("nav.nav");
 
   let toggleElem = [burgerBtn, blackout, nav];
 
@@ -15,6 +17,9 @@ export function addListenerToBurgerBtn() {
 
 function toggleBurgerStyles(arr, html, nav) {
   const toggleStyles = () => {
+    let windowWidth = document.documentElement.clientWidth;
+    let nav = document.querySelector("nav.nav");
+
     arr.forEach((el) => {
       el.classList.toggle("_active");
     });
@@ -24,10 +29,12 @@ function toggleBurgerStyles(arr, html, nav) {
     if (isLinkClicked) {
       isLinkClicked = false;
 
-      nav.addEventListener(
-        "click",
-        closeBurgerMenuClickingOnLink(nav, arr, html)
-      );
+      if (windowWidth < TABLE_WINDOW_WIDTH) {
+        nav.addEventListener(
+          "click",
+          closeBurgerMenuClickingOnLink(nav, arr, html)
+        );
+      }
     }
   };
 

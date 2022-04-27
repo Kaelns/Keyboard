@@ -9,7 +9,7 @@ export class CreateCard {
   generateCard() {
     let template = "";
     let card = document.createElement("div");
-    card.className = "slider__slide slide";
+    card.className = "slider__slide";
     card.dataset.id = this.id;
 
     template += '<div class="slide-img__container">';

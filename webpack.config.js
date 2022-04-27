@@ -7,6 +7,7 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const mode = process.env.NODE_ENV;
 const isDev = mode === "development";
@@ -104,6 +105,15 @@ module.exports = {
 
     new MiniCssExtractPlugin({
       filename: filename("styles", "css"),
+    }),
+    // path.resolve(__dirname, "src/assets/images/our-friends/*")
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "assets/images/our-friends/*",
+          to: path.resolve(__dirname, "shelter/assets/images/[name][ext]"),
+        },
+      ],
     }),
   ],
 

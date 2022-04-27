@@ -23,7 +23,7 @@
   width: 270px;
   height: 435px;
 
-  @include flex($align: center);
+  @include flex($justify: flex-end, $align: center);
   flex-direction: column;
   background: $color-background-cards;
   border-radius: 10px;

@@ -1,6 +1,6 @@
-import { shuffle } from "./Shuffle";
+import { shuffleArr } from "./Shuffle";
 
-export function sliderPagesPattern(numOfCards, arr48El) {
+export function generateArrOfSliderPagesPattern(numOfCards, arr48El) {
   if (!(numOfCards > 1)) {
     return arr48El;
   }
@@ -8,7 +8,7 @@ export function sliderPagesPattern(numOfCards, arr48El) {
   let res = [];
   for (let i = 0; i < 48 / numOfCards; i++) {
     res.push(
-      shuffle(arr48El.slice(i * numOfCards, i * numOfCards + numOfCards))
+      shuffleArr(arr48El.slice(i * numOfCards, i * numOfCards + numOfCards))
     );
   }
 

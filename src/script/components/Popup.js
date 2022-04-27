@@ -5,7 +5,7 @@ let createdCards = [];
 let lastInsertedCard;
 
 const listenCardToCreatePopup = () => {
-  let sliderContainer = document.querySelector(".slider");
+  let sliderContainer = document.querySelector(".slider-listener");
   sliderContainer.addEventListener("click", (e) => {
     let card = e.target.closest(".slider__slide");
     if (!card) return;

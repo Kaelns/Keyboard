@@ -67,6 +67,20 @@ $calc-width-mobile: calc(100vw - (10px * 2));
   }
 }
 
+// .slider-main {
+//   width: 990px;
+
+//   // * @media Tablet __________________
+//   @include media-tablet {
+//     width: 580px;
+//   }
+
+//   // Todo @media Mobile _______________
+//   @include media-mobile {
+//     width: 270px;
+//   }
+// }
+
 .slider-pets__wrapper {
   left: -1200px;
 

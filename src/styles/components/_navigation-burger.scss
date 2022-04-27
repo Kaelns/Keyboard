@@ -10,12 +10,10 @@ $nav-width: 320px;
     width: $nav-width;
     height: 100vh;
     background-color: $color-background-burger;
-    // transform: translate(100%);
     z-index: 3;
     @include animation();
 
     &._active {
-      // display: block;
       transform: translate(-100%);
     }
   }

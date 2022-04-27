@@ -26,9 +26,9 @@ $slide-width: 270px;
     grid-template-columns: repeat(2, $slide-width);
     gap: 30px max(5.2vw, 40px);
 
-    & > div:nth-last-child(-n + 2) {
-      display: none;
-    }
+    // & > div:nth-last-child(-n + 2) {
+    //   display: none;
+    // }
   }
 
   // Todo @media Mobile _______________
@@ -36,9 +36,9 @@ $slide-width: 270px;
     grid-template-columns: $slide-width;
     gap: 30px 0;
 
-    & > div:nth-last-child(-n + 5) {
-      display: none;
-    }
+    // & > div:nth-last-child(-n + 5) {
+    //   display: none;
+    // }
   }
 }
 
