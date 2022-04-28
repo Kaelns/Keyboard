@@ -34,7 +34,9 @@ function createAndCacheCard(id) {
 }
 
 function insertCreatedCardToPopup(id, popup) {
-  popup.append(createdCards[id].cloneNode(true));
+  if (id !== lastInsertedCard) {
+    popup.append(createdCards[id].cloneNode(true));
+  }
   lastInsertedCard = id;
 }
 

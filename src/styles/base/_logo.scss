@@ -1,7 +1,7 @@
 .logo__burger {
   display: none;
-  // * @media Tablet __________________
-  @include media-tablet {
+  // TODO @media Mobile __________________
+  @include media-mobile {
     position: absolute;
     top: 30px;
     left: 10px;

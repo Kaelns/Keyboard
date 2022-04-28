@@ -43,7 +43,12 @@ function toggleBurgerStyles(arr, html, nav) {
 
 function closeBurgerMenuClickingOnLink(nav, toggleElem, html) {
   const closeBurger = (e) => {
-    if (e.target.classList.contains("nav__link")) {
+    if (
+      e.target.classList.contains("nav__link") ||
+      e.target.classList.contains("logo__burger") ||
+      e.target.classList.contains("logo__title") ||
+      e.target.classList.contains("logo__subtitle")
+    ) {
       isLinkClicked = true;
       toggleBurgerStyles(toggleElem, html)();
       nav.removeEventListener("click", closeBurger);

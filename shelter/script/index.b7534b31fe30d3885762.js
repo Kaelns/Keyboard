@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[826],{960:(e,n,r)=>{var a=r(85),i=r(696),s=r(568);window.onload=function(){alert("Hi, please, if there are any problems - leave your nickname in the cross check or write to me in the discord Kaeln #1774"),(0,i.l)(),(0,a.M)(),(0,s.U)("main")}}},e=>{e.O(0,[300],(()=>{return n=960,e(e.s=n);var n}));e.O()}]);
-//# sourceMappingURL=../maps/script/index.b7534b31fe30d3885762.js.map
