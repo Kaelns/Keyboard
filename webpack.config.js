@@ -1,13 +1,13 @@
 // TODO https://www.youtube.com/watch?v=gVenbqg9Rww
 // TODO https://www.youtube.com/watch?v=eSaF8NXeNsA
-let outputFolder = "shelter";
+let outputFolder = "keyboard";
 
 const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+// const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const mode = process.env.NODE_ENV;
 const isDev = mode === "development";
@@ -44,8 +44,7 @@ module.exports = {
   mode: mode,
 
   entry: {
-    index: path.resolve(__dirname, "src/pages/main/index.js"),
-    pets: path.resolve(__dirname, "src/pages/pets/pets.js"),
+    index: path.resolve(__dirname, "src/index.js"),
   },
 
   output: {
@@ -89,32 +88,23 @@ module.exports = {
   plugins: [
     new HTMLWebpackPlugin({
       filename: "index.html",
-      template: path.resolve(__dirname, "src/pages/main/index.html"),
+      template: path.resolve(__dirname, "src/index.html"),
       minify: false,
       inject: "body",
       chunks: ["index"],
     }),
 
-    new HTMLWebpackPlugin({
-      filename: "pets.html",
-      template: path.resolve(__dirname, "src/pages/pets/pets.html"),
-      minify: false,
-      inject: "body",
-      chunks: ["pets"],
-    }),
-
     new MiniCssExtractPlugin({
       filename: filename("styles", "css"),
     }),
-    // path.resolve(__dirname, "src/assets/images/our-friends/*")
-    new CopyWebpackPlugin({
+    /*     new CopyWebpackPlugin({
       patterns: [
         {
           from: "assets/images/our-friends/*",
           to: path.resolve(__dirname, "shelter/assets/images/[name][ext]"),
         },
       ],
-    }),
+    }), */
   ],
 
   module: {
