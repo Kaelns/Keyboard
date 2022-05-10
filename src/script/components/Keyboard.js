@@ -79,22 +79,44 @@ const capsLockHandler = () => {
   }
 };
 
-const sliceTextAreaInnerHTML = (str, index, isDel) => {
-  let i = index - 1;
+const sliceOrAddTextAreaInnerHTML = (str, index, isDel, symbolToAdd) => {
+  let isDeletion = 0;
+  let i = index;
   const length = str.length;
-  // We cannot pass negative indexes directly to the 2nd slicing operation.
-  if ((i < 0 && !isDel) || (i + 1 === length && isDel)) {
-    return null;
+  if (!symbolToAdd) {
+    isDeletion = 1;
+    i -= 1;
+    if ((i < 0 && !isDel) || (i + 1 === length && isDel)) {
+      return null;
+    }
+
+    if (isDel) {
+      i++;
+    }
   }
 
-  if (isDel) {
-    i++;
+  return str.slice(0, i) + (symbolToAdd || '') + str.slice(i + isDeletion);
+};
+
+const insertKeyToTextArea = (pressedKey, textarea, position) => {
+  let symbolToAdd;
+  const includeRus = !isEng ? pressedKey.classList.contains('char-ru') : false;
+  const includeEng = isEng ? pressedKey.classList.contains('char-ru') : false;
+
+  if (pressedKey.classList.contains('char') || includeRus) {
+    symbolToAdd = pressedKey.innerHTML.trim();
+    textarea.innerHTML = sliceOrAddTextAreaInnerHTML(textarea.innerHTML, textarea.selectionStart, false, symbolToAdd);
+  } else if (pressedKey.classList.contains('double') || includeEng) {
+    const [shiftSymbol, symbol] = pressedKey.innerHTML.split('<br>').map((el) => el.trim());
+    symbolToAdd = isShift ? shiftSymbol : symbol;
+    textarea.innerHTML = sliceOrAddTextAreaInnerHTML(textarea.innerHTML, textarea.selectionStart, false, symbolToAdd);
   }
 
-  return str.slice(0, i) + str.slice(i + 1);
+  textarea.selectionStart = position + 1;
 };
 
 const allClicksHandler = (keyCode, pressedKey, e) => {
+  let symbolToAdd;
   const textarea = document.querySelector('textarea');
   const position = textarea.selectionStart;
   const textareaLength = textarea.innerHTML.length;
@@ -110,15 +132,19 @@ const allClicksHandler = (keyCode, pressedKey, e) => {
       capsLockHandler();
       break;
     case 'Enter':
-      textarea.innerHTML += '\n';
+
+      symbolToAdd = '\n';
+      textarea.innerHTML = sliceOrAddTextAreaInnerHTML(textarea.innerHTML, textarea.selectionStart, false, symbolToAdd);
       textarea.selectionStart = position + 1;
       break;
     case 'Space':
-      textarea.innerHTML += ' ';
+      symbolToAdd = ' ';
+      textarea.innerHTML = sliceOrAddTextAreaInnerHTML(textarea.innerHTML, textarea.selectionStart, false, symbolToAdd);
       textarea.selectionStart = position + 1;
       break;
     case 'Tab':
-      textarea.innerHTML += '    ';
+      symbolToAdd = '    ';
+      textarea.innerHTML = sliceOrAddTextAreaInnerHTML(textarea.innerHTML, textarea.selectionStart, false, symbolToAdd);
       textarea.selectionStart = position + 4;
       break;
     case 'ArrowLeft':
@@ -128,30 +154,33 @@ const allClicksHandler = (keyCode, pressedKey, e) => {
       textarea.selectionStart = textarea.selectionEnd = position + 1 > textareaLength ? textareaLength : position + 1;
       break;
     case 'Delete':
-      const sliceForDelete = sliceTextAreaInnerHTML(textarea.innerHTML, textarea.selectionStart, true);
+      const sliceForDelete = sliceOrAddTextAreaInnerHTML(textarea.innerHTML, textarea.selectionStart, true);
       if (sliceForDelete !== null) {
         textarea.innerHTML = sliceForDelete;
         textarea.selectionStart = position;
       }
       break;
     case 'Backspace':
-      const sliceForBackspace = sliceTextAreaInnerHTML(textarea.innerHTML, textarea.selectionStart, false);
+      const sliceForBackspace = sliceOrAddTextAreaInnerHTML(textarea.innerHTML, textarea.selectionStart, false);
       if (sliceForBackspace !== null) {
         textarea.innerHTML = sliceForBackspace;
         textarea.selectionStart = position - 1;
       }
       break;
+    case 'ShiftLeft':
+    case 'ShiftRight':
+      if (e.repeat) return;
+      isShift = true;
+      capsLockHandler();
+      break;
+    case 'ControlLeft':
+    case 'MetaLeft':
+    case 'AltLeft':
+    case 'AltRight':
+    case 'ControlRight':
+      break;
     default:
-      const includeRus = !isEng ? pressedKey.classList.contains('char-ru') : false;
-      const includeEng = isEng ? pressedKey.classList.contains('char-ru') : false;
-
-      if (pressedKey.classList.contains('char') || includeRus) {
-        textarea.innerHTML += pressedKey.innerHTML.trim();
-      } else if (pressedKey.classList.contains('double') || includeEng) {
-        const [shiftSymbol, symbol] = pressedKey.innerHTML.split('<br>').map((el) => el.trim());
-        textarea.innerHTML += isShift ? shiftSymbol : symbol;
-      }
-      textarea.selectionStart = position + 1;
+      insertKeyToTextArea(pressedKey, textarea, position);
   }
 };
 
@@ -203,6 +232,11 @@ document.addEventListener('keyup', (e) => {
 
   if (pressedKey) {
     pressedKey.classList.remove('button_active');
+  }
+
+  if (keyCode === 'ShiftLeft' || keyCode === 'ShiftRight') {
+    isShift = false;
+    capsLockHandler();
   }
 });
 
