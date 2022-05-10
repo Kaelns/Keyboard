@@ -27,9 +27,10 @@ function createPage() {
   body.append(container);
 }
 
-// document.addEventListener("keydown", (e) => {
-//   console.log(e);
-// });
+/* document.addEventListener('keydown', (e) => {
+  keyCodes.push(e.code);
+  console.log(keyCodes);
+}); */
 
 // eslint-disable-next-line import/prefer-default-export
 export { createPage };

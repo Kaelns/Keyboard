@@ -11,20 +11,22 @@ export default class CreateKeyboard {
     Object.keys(this.rows).forEach((row) => {
       template += '<div class="row">';
 
-      this.rows[row].forEach(({ elEng, classes, elRus }) => {
+      this.rows[row].forEach(({
+        elEng, classes, dataCode, elRus,
+      }) => {
         if (elEng !== 'arrows') {
           template += `<button type="button" class="${classes.join(
             ' ',
-          )}" data-cache="${elRus || null}">${elEng}</button>`;
+          )}" data-code="${dataCode}" data-cache="${elRus || null}">${elEng} </button>`;
         } else {
           template += `<div class="arrows">
           <div class="row">
-            <button type="button" class="arrow arrow_up"></button>
+            <button type="button" class="arrow arrow_up" data-code="ArrowUp"></button>
           </div>
           <div class="row">
-            <button type="button" class="arrow arrow_left"></button>
-            <button type="button" class="arrow arrow_down"></button>
-            <button type="button" class="arrow arrow_right"></button>
+          <button type="button" class="arrow arrow_left" data-code="ArrowLeft"></button>
+          <button type="button" class="arrow arrow_down" data-code="ArrowDown"></button>
+            <button type="button" class="arrow arrow_right" data-code="ArrowRight"></button>
           </div>
         </div>`;
         }
