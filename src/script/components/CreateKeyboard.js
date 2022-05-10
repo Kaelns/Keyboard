@@ -17,7 +17,7 @@ export default class CreateKeyboard {
         if (elEng !== 'arrows') {
           template += `<button type="button" class="${classes.join(
             ' ',
-          )}" data-code="${dataCode}" data-cache="${elRus || null}">${elEng} </button>`;
+          )}" data-code="${dataCode}" ${elRus ? `data-cache="${elRus}"` : ''}>${elEng} </button>`;
         } else {
           template += `<div class="arrows">
           <div class="row">

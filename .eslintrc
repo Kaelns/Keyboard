@@ -9,6 +9,10 @@
   "extends": ["airbnb/base"],
   "rules": {
     "max-len": ["error", 150, { "ignoreUrls": true }],
-    "no-alert": "off"
+    "no-alert": "off",
+    "prefer-destructuring": "off",
+    "no-case-declarations": "off",
+    "no-param-reassign": "off",
+    "no-plusplus": "off"
   }
 }
