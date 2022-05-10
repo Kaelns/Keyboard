@@ -15,11 +15,5 @@ getLocalStorage();
 
 window.onload = function onload() {
   // alert("Hi guys, I'm a little late so give me one more day please");
-  language = createPage(language);
+  createPage(language);
 };
-
-function setLocalStorage() {
-  localStorage.setItem('language', language);
-}
-
-window.addEventListener('beforeunload', setLocalStorage);
