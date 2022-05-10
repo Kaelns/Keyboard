@@ -1,0 +1,14 @@
+{
+  // * https://youtu.be/cbuBXiHeFW0
+  // Environment
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": ["airbnb/base"],
+  "rules": {
+    "max-len": ["error", 150, { "ignoreUrls": true }],
+    "no-alert": "off"
+  }
+}
