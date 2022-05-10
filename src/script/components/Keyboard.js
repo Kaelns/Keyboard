@@ -34,7 +34,7 @@ const languageHandler = (event, isFirstTime) => {
   }
 };
 
-function createTextArea() {
+const createTextArea = () => {
   const textarea = document.createElement('textarea');
   textarea.id = 'editable';
   textarea.className = 'textarea';
@@ -45,33 +45,15 @@ function createTextArea() {
   textarea.setAttribute('autofocus', 'autofocus');
 
   return textarea;
-}
+};
 
-function createPage(language) {
-  lang = language;
-  isEng = lang === 'en';
-
-  const body = document.querySelector('body');
-
-  const container = document.createElement('div');
-  container.className = 'container';
-
-  const textarea = createTextArea();
-  const keyboard = new CreateKeyboard(JSON).generateKeyboard();
-
-  container.append(textarea, keyboard);
-  body.append(container);
-
-  languageHandler(null, true);
-}
-
-function getPressedKey(e, keyCode) {
+const getPressedKey = (e, keyCode) => {
   const selector = `[data-code="${keyCode}"]`;
 
   const pressedKey = document.querySelector(selector);
 
   return pressedKey;
-}
+};
 
 const capsLockHandler = () => {
   let chars;
@@ -171,6 +153,32 @@ const allClicksHandler = (keyCode, pressedKey, e) => {
       }
       textarea.selectionStart = position + 1;
   }
+};
+
+const createPage = (language) => {
+  lang = language;
+  isEng = lang === 'en';
+
+  const body = document.querySelector('body');
+
+  const container = document.createElement('div');
+  container.className = 'container';
+
+  const textarea = createTextArea();
+  const keyboard = new CreateKeyboard(JSON).generateKeyboard();
+
+  container.append(textarea, keyboard);
+  body.append(container);
+
+  languageHandler(null, true);
+
+  document.querySelector('#board').addEventListener('click', (e) => {
+    const pressedKey = e.target;
+    if (pressedKey.tagName.toLowerCase() === 'button') {
+      const keyCode = pressedKey.dataset.code;
+      allClicksHandler(keyCode, pressedKey, e);
+    }
+  });
 };
 
 // eslint-disable-next-line consistent-return
