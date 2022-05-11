@@ -4,7 +4,7 @@ import './styles/style.scss';
 let language;
 
 function getLocalStorage() {
-  if (localStorage.getItem('language')) {
+  if (localStorage.getItem('language') && localStorage.getItem('language') !== 'undefined') {
     language = localStorage.getItem('language');
   } else {
     language = 'en';

@@ -156,10 +156,10 @@
       "elRus": "ъ"
     },
     {
-      "elEng": "|<br />&bsol;",
+      "elEng": "|<br />\\",
       "classes": ["flex_1", "double"],
       "dataCode": "Backslash",
-      "elRus": "/<br />&bsol;"
+      "elRus": "/<br />\\;"
     },
     {
       "elEng": "del",
@@ -234,7 +234,7 @@
       "elRus": "ж"
     },
     {
-      "elEng": "'<br />&quot;",
+      "elEng": "'<br />\"",
       "classes": ["char-ru"],
       "dataCode": "Quote",
       "elRus": "э"
@@ -294,13 +294,13 @@
       "elRus": "ь"
     },
     {
-      "elEng": "&lt;<br />,",
+      "elEng": "<<br />,",
       "classes": ["char-ru"],
       "dataCode": "Comma",
       "elRus": "б"
     },
     {
-      "elEng": "&gt;<br />.",
+      "elEng": "><br />.",
       "classes": ["char-ru"],
       "dataCode": "Period",
       "elRus": "ю"

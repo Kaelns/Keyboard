@@ -1,11 +1,10 @@
 #board {
-  background-color: #444;
-  width: 62rem;
-  border-radius: 2.5rem;
-  margin-block-start: 3vh;
-  box-sizing: border-box;
-  padding: 1rem;
   position: relative;
+  width: 62rem;
+  padding: 1rem;
+  margin-block: 3vh 1.8vh;
+  border-radius: 2.5rem;
+  background-color: #444;
   box-shadow: 0 5px 0 0 #666, 0 6px 15px 3px rgba(0, 0, 0, 0.5);
 }
 
