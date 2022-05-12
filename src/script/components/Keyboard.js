@@ -257,9 +257,9 @@ document.addEventListener('keydown', (e) => {
   if (pressedKey) {
     if (pressedKey.dataset.code !== 'ArrowUp' && pressedKey.dataset.code !== 'ArrowDown') {
       e.preventDefault();
-      pressedKey.classList.add('button_active');
       allClicksHandler(keyCode, pressedKey, e);
     }
+    pressedKey.classList.add('button_active');
   } else {
     // eslint-disable-next-line no-console
     return console.log('There is no such key on the virtual keyboard');
