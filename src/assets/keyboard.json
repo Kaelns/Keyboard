@@ -1,0 +1,356 @@
+{
+  "row1": [
+    {
+      "elEng": "~<br />`",
+      "classes": ["char-ru"],
+      "dataCode": "Backquote",
+      "elRus": "ё"
+    },
+    {
+      "elEng": "!<br />1",
+      "classes": ["double"],
+      "dataCode": "Digit1"
+    },
+    {
+      "elEng": "@<br />2",
+      "classes": ["double"],
+      "dataCode": "Digit2",
+      "elRus": "&quot;<br />2"
+    },
+    {
+      "elEng": "#<br />3",
+      "classes": ["double"],
+      "dataCode": "Digit3",
+      "elRus": "№<br />3"
+    },
+    {
+      "elEng": "$<br />4",
+      "classes": ["double"],
+      "dataCode": "Digit4",
+      "elRus": ";<br />4"
+    },
+    {
+      "elEng": "%<br />5",
+      "classes": ["double"],
+      "dataCode": "Digit5"
+    },
+    {
+      "elEng": "^<br />6",
+      "classes": ["double"],
+      "dataCode": "Digit6",
+      "elRus": ":<br />6"
+    },
+    {
+      "elEng": "&<br />7",
+      "classes": ["double"],
+      "dataCode": "Digit7",
+      "elRus": "?<br />7"
+    },
+    {
+      "elEng": "*<br />8",
+      "classes": ["double"],
+      "dataCode": "Digit8"
+    },
+    {
+      "elEng": "(<br />9",
+      "classes": ["double"],
+      "dataCode": "Digit9"
+    },
+    {
+      "elEng": ")<br />0",
+      "classes": ["double"],
+      "dataCode": "Digit0"
+    },
+    {
+      "elEng": "_<br />-",
+      "classes": ["double"],
+      "dataCode": "Minus"
+    },
+    {
+      "elEng": "+<br />=",
+      "classes": ["double"],
+      "dataCode": "Equal"
+    },
+    {
+      "elEng": "back",
+      "classes": ["text", "right", "flex_1"],
+      "dataCode": "Backspace"
+    }
+  ],
+  "row2": [
+    {
+      "elEng": "tab",
+      "classes": ["text", "flex_1"],
+      "dataCode": "Tab"
+    },
+    {
+      "elEng": "q",
+      "classes": ["char"],
+      "dataCode": "KeyQ",
+      "elRus": "й"
+    },
+    {
+      "elEng": "w",
+      "classes": ["char"],
+      "dataCode": "KeyW",
+      "elRus": "ц"
+    },
+    {
+      "elEng": "e",
+      "classes": ["char"],
+      "dataCode": "KeyE",
+      "elRus": "у"
+    },
+    {
+      "elEng": "r",
+      "classes": ["char"],
+      "dataCode": "KeyR",
+      "elRus": "к"
+    },
+    {
+      "elEng": "t",
+      "classes": ["char"],
+      "dataCode": "KeyT",
+      "elRus": "е"
+    },
+    {
+      "elEng": "y",
+      "classes": ["char"],
+      "dataCode": "KeyY",
+      "elRus": "н"
+    },
+    {
+      "elEng": "u",
+      "classes": ["char"],
+      "dataCode": "KeyU",
+      "elRus": "г"
+    },
+    {
+      "elEng": "i",
+      "classes": ["char"],
+      "dataCode": "KeyI",
+      "elRus": "ш"
+    },
+    {
+      "elEng": "o",
+      "classes": ["char"],
+      "dataCode": "KeyO",
+      "elRus": "щ"
+    },
+    {
+      "elEng": "p",
+      "classes": ["char"],
+      "dataCode": "KeyP",
+      "elRus": "з"
+    },
+    {
+      "elEng": "{<br />[",
+      "classes": ["char-ru"],
+      "dataCode": "BracketLeft",
+      "elRus": "х"
+    },
+    {
+      "elEng": "}<br />]",
+      "classes": ["char-ru"],
+      "dataCode": "BracketRight",
+      "elRus": "ъ"
+    },
+    {
+      "elEng": "|<br />\\",
+      "classes": ["flex_1", "double"],
+      "dataCode": "Backslash",
+      "elRus": "/<br />\\"
+    },
+    {
+      "elEng": "del",
+      "classes": ["text", "flex_1"],
+      "dataCode": "Delete"
+    }
+  ],
+  "row3": [
+    {
+      "elEng": "caps lock <span class='bulb'></span> ",
+      "classes": ["text", "left", "flex_1", "caps"],
+      "dataCode": "CapsLock"
+    },
+    {
+      "elEng": "a",
+      "classes": ["char"],
+      "dataCode": "KeyA",
+      "elRus": "ф"
+    },
+    {
+      "elEng": "s",
+      "classes": ["char"],
+      "dataCode": "KeyS",
+      "elRus": "ы"
+    },
+    {
+      "elEng": "d",
+      "classes": ["char"],
+      "dataCode": "KeyD",
+      "elRus": "в"
+    },
+    {
+      "elEng": "f",
+      "classes": ["char"],
+      "dataCode": "KeyF",
+      "elRus": "а"
+    },
+    {
+      "elEng": "g",
+      "classes": ["char"],
+      "dataCode": "KeyG",
+      "elRus": "п"
+    },
+    {
+      "elEng": "h",
+      "classes": ["char"],
+      "dataCode": "KeyH",
+      "elRus": "р"
+    },
+    {
+      "elEng": "j",
+      "classes": ["char"],
+      "dataCode": "KeyJ",
+      "elRus": "о"
+    },
+    {
+      "elEng": "k",
+      "classes": ["char"],
+      "dataCode": "KeyK",
+      "elRus": "л"
+    },
+    {
+      "elEng": "l",
+      "classes": ["char"],
+      "dataCode": "KeyL",
+      "elRus": "д"
+    },
+    {
+      "elEng": ";<br />:",
+      "classes": ["char-ru"],
+      "dataCode": "Semicolon",
+      "elRus": "ж"
+    },
+    {
+      "elEng": "'<br />\"",
+      "classes": ["char-ru"],
+      "dataCode": "Quote",
+      "elRus": "э"
+    },
+    {
+      "elEng": "enter",
+      "classes": ["text", "right", "flex_1"],
+      "dataCode": "Enter"
+    }
+  ],
+  "row4": [
+    {
+      "elEng": "shift",
+      "classes": ["text", "left", "flex_1", "right-shift"],
+      "dataCode": "ShiftLeft"
+    },
+    {
+      "elEng": "z",
+      "classes": ["char"],
+      "dataCode": "KeyZ",
+      "elRus": "я"
+    },
+    {
+      "elEng": "x",
+      "classes": ["char"],
+      "dataCode": "KeyX",
+      "elRus": "ч"
+    },
+    {
+      "elEng": "c",
+      "classes": ["char"],
+      "dataCode": "KeyC",
+      "elRus": "с"
+    },
+    {
+      "elEng": "v",
+      "classes": ["char"],
+      "dataCode": "KeyV",
+      "elRus": "м"
+    },
+    {
+      "elEng": "b",
+      "classes": ["char"],
+      "dataCode": "KeyB",
+      "elRus": "и"
+    },
+    {
+      "elEng": "n",
+      "classes": ["char"],
+      "dataCode": "KeyN",
+      "elRus": "т"
+    },
+    {
+      "elEng": "m",
+      "classes": ["char"],
+      "dataCode": "KeyM",
+      "elRus": "ь"
+    },
+    {
+      "elEng": "<<br />,",
+      "classes": ["char-ru"],
+      "dataCode": "Comma",
+      "elRus": "б"
+    },
+    {
+      "elEng": "><br />.",
+      "classes": ["char-ru"],
+      "dataCode": "Period",
+      "elRus": "ю"
+    },
+    {
+      "elEng": "?<br />/",
+      "classes": ["double"],
+      "dataCode": "Slash",
+      "elRus": ".<br />,"
+    },
+    {
+      "elEng": "shift",
+      "classes": ["text", "right", "flex_1", "shift-left"],
+      "dataCode": "ShiftRight"
+    }
+  ],
+  "row5": [
+    {
+      "elEng": "ctrl",
+      "classes": ["text", "ctrl-left"],
+      "dataCode": "ControlLeft"
+    },
+    {
+      "elEng": "win",
+      "classes": ["text"],
+      "dataCode": "MetaLeft"
+    },
+    {
+      "elEng": "alt",
+      "classes": ["text", "alt-left"],
+      "dataCode": "AltLeft"
+    },
+    {
+      "elEng": "",
+      "classes": ["flex_1"],
+      "dataCode": "Space"
+    },
+    {
+      "elEng": "ctrl",
+      "classes": ["text", "ctrl-right"],
+      "dataCode": "ControlRight"
+    },
+    {
+      "elEng": "alt",
+      "classes": ["text", "alt-right"],
+      "dataCode": "AltRight"
+    },
+    {
+      "elEng": "arrows",
+      "classes": ["arrows"]
+    }
+  ]
+}

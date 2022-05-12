@@ -1,0 +1,55 @@
+@mixin font($size, $height, $spacing, $style: normal, $weight: 400) {
+  font-size: $size;
+  font-weight: $weight;
+  font-style: $style;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
+
+@mixin flex($justify: flex-start, $align: stretch, $flex-direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $flex-direction;
+}
+
+@mixin animation($time: 0.5s, $prop: all) {
+  transition: $prop $time ease-out;
+}
+
+@mixin content-before($width, $height) {
+  content: "";
+  position: absolute;
+  width: $width;
+  height: $height;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin padding-block($start: 42px, $end: 42px) {
+  padding-block: $start $end;
+}
+
+@mixin media($breakpoint) {
+  @media (max-width: ($breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: ($content-width - 1)) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: ($tablet-width - 1)) {
+    @content;
+  }
+}
+
+@mixin animation-keyframes($move) {
+  animation-name: $move;
+  animation-duration: 1s;
+}
