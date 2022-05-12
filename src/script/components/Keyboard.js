@@ -12,6 +12,30 @@ let pressedKeyForMouseEvent;
 // eslint-disable-next-line max-len
 const arrOfMessages = ['All keys that are not present on the virtual keyboard work as usual', 'The keyboard was created in the Windows operating system', 'To switch the language combination: left ctrl + alt'];
 
+const capsLockHandler = () => {
+  let chars;
+  const charsEng = document.querySelectorAll('.char');
+
+  if (lang === 'en') {
+    chars = charsEng;
+  } else {
+    const charsRus = document.querySelectorAll('.char-ru');
+    chars = [...charsEng, ...charsRus];
+  }
+
+  if (!isCaps) {
+    chars.forEach((el) => {
+      el.innerHTML = el.innerHTML.toUpperCase();
+    });
+    isCaps = true;
+  } else {
+    chars.forEach((el) => {
+      el.innerHTML = el.innerHTML.toLowerCase();
+    });
+    isCaps = false;
+  }
+};
+
 const languageHandler = (event, isFirstTime) => {
   let further;
   let isRusInLocalStorage;
@@ -23,9 +47,14 @@ const languageHandler = (event, isFirstTime) => {
   if (event && event.altKey && event.ctrlKey) {
     lang = lang === 'en' ? 'ru' : 'en';
     isEng = lang === 'en';
+
     further = true;
   }
+
   if (isRusInLocalStorage || further) {
+    const randomChar = document.querySelector('.char').innerHTML;
+    const isRandomCharCaps = randomChar ? randomChar === randomChar.toUpperCase() : false;
+
     const elementsToTranslate = document.querySelectorAll('[data-cache]');
 
     elementsToTranslate.forEach((el) => {
@@ -33,6 +62,14 @@ const languageHandler = (event, isFirstTime) => {
       el.dataset.cache = el.innerHTML;
       el.innerHTML = cache;
     });
+
+    if (isRandomCharCaps) {
+      isCaps = false;
+      capsLockHandler();
+    } else {
+      isCaps = true;
+      capsLockHandler();
+    }
 
     further = false;
   }
@@ -58,30 +95,6 @@ const getPressedKey = (e, keyCode) => {
   const pressedKey = document.querySelector(selector);
 
   return pressedKey;
-};
-
-const capsLockHandler = () => {
-  let chars;
-  const charsEng = document.querySelectorAll('.char');
-
-  if (lang === 'en') {
-    chars = charsEng;
-  } else {
-    const charsRus = document.querySelectorAll('.char-ru');
-    chars = [...charsEng, ...charsRus];
-  }
-
-  if (!isCaps) {
-    chars.forEach((el) => {
-      el.innerHTML = el.innerHTML.toUpperCase();
-    });
-    isCaps = true;
-  } else {
-    chars.forEach((el) => {
-      el.innerHTML = el.innerHTML.toLowerCase();
-    });
-    isCaps = false;
-  }
 };
 
 const sliceOrAddTextAreaInnerHTML = (str, index, isDel, symbolToAdd) => {
@@ -138,7 +151,6 @@ const allClicksHandler = (keyCode, pressedKey, e) => {
       capsLockHandler();
       break;
     case 'Enter':
-
       symbolToAdd = '\n';
       textarea.innerHTML = sliceOrAddTextAreaInnerHTML(textarea.innerHTML, textarea.selectionStart, false, symbolToAdd);
       textarea.selectionStart = position + 1;
@@ -185,11 +197,12 @@ const allClicksHandler = (keyCode, pressedKey, e) => {
     case 'AltRight':
     case 'ControlRight':
       break;
-      /*     case 'ArrowUp':
+    case 'ArrowUp':
+      textarea.selectionStart = textarea.selectionEnd = 0;
       break;
-    default:
     case 'ArrowDown':
-      break; */
+      textarea.selectionStart = textarea.selectionEnd = textareaLength;
+      break;
     default:
       insertKeyToTextArea(pressedKey, textarea, position);
   }
@@ -242,17 +255,15 @@ document.addEventListener('keydown', (e) => {
   const pressedKey = getPressedKey(e, keyCode);
 
   if (pressedKey) {
-    pressedKey.classList.add('button_active');
-
     if (pressedKey.dataset.code !== 'ArrowUp' && pressedKey.dataset.code !== 'ArrowDown') {
       e.preventDefault();
+      pressedKey.classList.add('button_active');
+      allClicksHandler(keyCode, pressedKey, e);
     }
   } else {
     // eslint-disable-next-line no-console
     return console.log('There is no such key on the virtual keyboard');
   }
-
-  allClicksHandler(keyCode, pressedKey, e);
 });
 
 document.addEventListener('keyup', (e) => {
